@@ -154,3 +154,10 @@ SpO₂ e GSR indisponíveis e repete que `IR > 5000` e `movimento >= 0.08` são
 limiares provisórios. Nove testes foram aprovados, a análise estática não
 encontrou problemas e o APK foi instalado no tablet. O commit verificado é
 `3a453ff`; a avaliação visual permanece pendente.
+
+### Aprovação do monitoramento simulado
+
+O Professor Gerson testou no tablet a seleção da fonte e confirmou o
+funcionamento adequado do monitoramento. Os quatro estados — sem contato, sinal
+adequado, movimento detectado e falha simulada — foram percorridos com sucesso.
+As amostras artificiais do teste não foram armazenadas.

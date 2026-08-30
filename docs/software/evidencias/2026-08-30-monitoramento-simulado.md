@@ -7,8 +7,8 @@
 - commit do aplicativo verificado: `3a453ff`;
 - plataforma: Flutter/Android;
 - dispositivo de instalação: tablet Samsung SM-X810;
-- estado: verificações automáticas e instalação concluídas; avaliação visual do
-  orientador pendente.
+- estado: verificações automáticas, instalação e avaliação visual do orientador
+  concluídas.
 
 ## Finalidade
 
@@ -73,6 +73,7 @@ uma pessoa.
 | compilação Android de depuração | sucesso |
 | atualização no tablet SM-X810 | sucesso |
 | abertura da atividade principal | sucesso |
+| avaliação visual e funcional pelo orientador | aprovada |
 
 Os testes confirmam:
 
@@ -85,14 +86,30 @@ Os testes confirmam:
 - os quatro estados podem ser percorridos;
 - os limiares provisórios aparecem na tela.
 
+## Avaliação pelo orientador
+
+O Professor Gerson Cesar Grobe de Miranda percorreu a seleção da fonte e o
+monitoramento no tablet Samsung SM-X810. O funcionamento foi considerado
+adequado, incluindo os quatro estados previstos:
+
+1. sem contato;
+2. sinal adequado;
+3. movimento detectado;
+4. falha simulada.
+
+A avaliação também confirmou a apresentação da origem simulada e o avanço da
+sequência. Não foram preservadas as amostras usadas no teste, pois eram dados
+artificiais transitórios e o resultado da validação é evidência suficiente para
+este incremento.
+
 ## Limitações e próximo portão
 
 - as amostras não são persistidas nem exportadas;
 - o simulador é manual e possui apenas quatro estados básicos;
 - ainda faltam testes de serialização dos modelos;
 - a fonte BLE é somente uma indicação visual desabilitada;
-- a nova interface precisa de avaliação visual no tablet pelo orientador.
+- o fluxo completo ainda depende das telas posteriores e de nova avaliação.
 
-Após a aprovação visual, o próximo incremento deverá definir o comportamento da
-sessão simulada ao longo do tempo e preparar a intervenção Blue Space, sem
-antecipar a implementação BLE real.
+O próximo incremento deverá definir o comportamento da sessão simulada ao longo
+do tempo e preparar a intervenção Blue Space, sem antecipar a implementação BLE
+real.

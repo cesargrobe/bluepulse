@@ -64,8 +64,8 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   no emulador e em um tablet físico Samsung SM-X810. Código anônimo e
   autorrelato inicial foram aprovados nos testes automatizados e na avaliação
   visual do orientador no tablet. Seleção da fonte e monitoramento simulado
-  foram implementados e aguardam avaliação visual. As demais telas e a revisão
-  visual do fluxo completo continuam abertas.
+  também foram aprovados no tablet, incluindo os quatro estados de qualidade.
+  As demais telas e a revisão visual do fluxo completo continuam abertas.
 
 - [ ] **4. Implementar modelos de dados e simulador determinístico**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`
@@ -77,8 +77,8 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   controlado.
   Estado em 30/08/2026: rascunho da sessão, amostra e simulador determinístico
   implementados; mesma semente reproduz a sequência e BPM, SpO₂ e GSR ficam
-  nulos. Permanecem pendentes serialização, cenários temporais ampliados e
-  avaliação visual do monitoramento.
+  nulos. Os quatro estados foram aprovados visualmente no tablet. Permanecem
+  pendentes serialização e cenários temporais ampliados.
 
 - [ ] **5. Implementar autorrelato e máquina de estados da sessão**
   Referência: `especificacao-mvp.md > Fluxo obrigatório`
