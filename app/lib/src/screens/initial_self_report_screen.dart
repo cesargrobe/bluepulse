@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../models/session_draft.dart';
+import 'data_source_selection_screen.dart';
+
 class InitialSelfReportScreen extends StatefulWidget {
   const InitialSelfReportScreen({required this.sessionCode, super.key});
 
@@ -23,7 +26,7 @@ class _InitialSelfReportScreenState extends State<InitialSelfReportScreen> {
       return;
     }
 
-    await showDialog<void>(
+    final shouldContinue = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Autorrelato inicial concluído'),
@@ -34,12 +37,29 @@ class _InitialSelfReportScreenState extends State<InitialSelfReportScreen> {
         ),
         actions: [
           FilledButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Entendi'),
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Continuar'),
           ),
         ],
       ),
     );
+
+    if (shouldContinue == true && mounted) {
+      Navigator.of(context).push(
+        MaterialPageRoute<void>(
+          builder: (_) => DataSourceSelectionScreen(
+            sessionDraft: SessionDraft(
+              sessionCode: widget.sessionCode,
+              initialSelfReport: InitialSelfReport(
+                tension: _tension!,
+                tranquility: _tranquility!,
+                comfort: _comfort!,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
   }
 
   @override
