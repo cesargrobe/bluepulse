@@ -22,6 +22,7 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
   BluetoothDevice? _device;
   BluePulseBlePacket? _packet;
   String? _message;
+  int _nearbyDevices = 0;
   StreamSubscription<List<ScanResult>>? _scanSubscription;
   StreamSubscription<BluetoothConnectionState>? _connectionSubscription;
   StreamSubscription<List<int>>? _sampleSubscription;
@@ -31,6 +32,7 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
       _stage = _BleStage.scanning;
       _device = null;
       _message = null;
+      _nearbyDevices = 0;
     });
 
     try {
@@ -48,31 +50,35 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
 
       await _scanSubscription?.cancel();
       _scanSubscription = FlutterBluePlus.onScanResults.listen((results) {
-        if (results.isNotEmpty) {
-          // A busca já é filtrada pelo UUID exclusivo do serviço BluePulse.
-          // O nome pode chegar vazio em alguns adaptadores BLE e não deve ser
-          // usado como segundo requisito para reconhecer o protótipo.
-          final result = results.first;
-          FlutterBluePlus.stopScan();
-          if (mounted) {
-            setState(() {
-              _device = result.device;
-              _stage = _BleStage.found;
-            });
+        if (mounted) setState(() => _nearbyDevices = results.length);
+        for (final result in results) {
+          final advertisement = result.advertisementData;
+          final hasBluePulseService = advertisement.serviceUuids.contains(
+            Guid(bluePulseServiceUuid),
+          );
+          if (advertisement.advName == bluePulseDeviceName ||
+              hasBluePulseService) {
+            FlutterBluePlus.stopScan();
+            if (mounted) {
+              setState(() {
+                _device = result.device;
+                _stage = _BleStage.found;
+              });
+            }
+            return;
           }
         }
       });
 
-      await FlutterBluePlus.startScan(
-        withServices: [Guid(bluePulseServiceUuid)],
-        timeout: const Duration(seconds: 10),
-      );
+      await FlutterBluePlus.startScan(timeout: const Duration(seconds: 10));
       await FlutterBluePlus.isScanning.where((value) => !value).first;
 
       if (mounted && _device == null) {
         setState(() {
           _stage = _BleStage.error;
-          _message = 'BluePulse-ESP32 não foi encontrado. Verifique se o ESP32 está ligado e anunciando.';
+          _message = _nearbyDevices == 0
+              ? 'Nenhum dispositivo BLE foi detectado. Verifique o Bluetooth do tablet.'
+              : 'Foram detectados $_nearbyDevices dispositivos BLE próximos, mas nenhum anunciou o nome ou o serviço BluePulse. Verifique se o OLED mostra BLE: ANUNCIANDO.';
         });
       }
     } catch (error) {
