@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/session_draft.dart';
 import '../simulation/deterministic_simulator.dart';
+import 'timed_monitoring_screen.dart';
 
 class SimulatedMonitoringScreen extends StatefulWidget {
   const SimulatedMonitoringScreen({required this.sessionDraft, super.key});
@@ -164,6 +165,19 @@ class _SimulatedMonitoringScreenState extends State<SimulatedMonitoringScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
+                  FilledButton.icon(
+                    key: const Key('open-timed-session'),
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) => TimedMonitoringScreen(
+                          sessionDraft: widget.sessionDraft,
+                        ),
+                      ),
+                    ),
+                    icon: const Icon(Icons.timer_outlined),
+                    label: const Text('Iniciar sessão temporizada'),
+                  ),
+                  const SizedBox(height: 8),
                   FilledButton.icon(
                     key: const Key('next-simulated-sample'),
                     onPressed: _nextSample,

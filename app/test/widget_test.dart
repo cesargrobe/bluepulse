@@ -131,6 +131,50 @@ void main() {
       expect(find.text(expectedTitle), findsOneWidget);
     }
   });
+
+  testWidgets('executa sessão temporizada e apresenta pausa oceânica', (
+    tester,
+  ) async {
+    await _goToSimulatedMonitoring(tester);
+
+    final timedButton = find.byKey(const Key('open-timed-session'));
+    await tester.ensureVisible(timedButton);
+    await tester.tap(timedButton);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Ensaio automático de 30 segundos'), findsOneWidget);
+    await tester.tap(find.byKey(const Key('start-timed-monitoring')));
+    await tester.pump(const Duration(seconds: 2));
+    expect(find.text('00:28'), findsOneWidget);
+
+    await tester.ensureVisible(
+      find.byKey(const Key('toggle-timed-monitoring')),
+    );
+    await tester.tap(find.byKey(const Key('toggle-timed-monitoring')));
+    await tester.pump(const Duration(seconds: 3));
+    expect(find.text('00:28'), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('toggle-timed-monitoring')));
+    await tester.pump(const Duration(seconds: 28));
+    expect(find.text('Monitoramento concluído'), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('continue-to-blue-space')));
+    await tester.pumpAndSettle();
+    expect(find.text('Respiração visual opcional'), findsOneWidget);
+    expect(find.textContaining('Áudio não incluído'), findsOneWidget);
+    expect(
+      find.textContaining('não realiza diagnóstico clínico'),
+      findsOneWidget,
+    );
+  });
+}
+
+Future<void> _goToSimulatedMonitoring(WidgetTester tester) async {
+  await _goToDataSourceSelection(tester);
+  final simulatedSource = find.byKey(const Key('select-simulated-source'));
+  await tester.ensureVisible(simulatedSource);
+  await tester.tap(simulatedSource);
+  await tester.pumpAndSettle();
 }
 
 Future<void> _goToDataSourceSelection(WidgetTester tester) async {
