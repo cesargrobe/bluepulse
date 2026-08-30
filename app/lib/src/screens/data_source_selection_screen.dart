@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/session_draft.dart';
+import 'ble_monitoring_screen.dart';
 import 'simulated_monitoring_screen.dart';
 
 class DataSourceSelectionScreen extends StatelessWidget {
@@ -36,8 +37,8 @@ class DataSourceSelectionScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   const Text(
-                    'Nesta etapa, somente o modo simulado está disponível. '
-                    'Ele permite validar o aplicativo sem usar o sensor.',
+                    'O modo simulado permite testar a interface. A conexão BLE '
+                    'recebe amostras técnicas reais do protótipo.',
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 24),
@@ -67,18 +68,27 @@ class DataSourceSelectionScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   _SourceCard(
-                    icon: Icons.bluetooth_disabled_rounded,
+                    icon: Icons.bluetooth_rounded,
                     title: 'Dispositivo BLE',
                     description:
-                        'Será habilitado somente após definição e teste do '
-                        'protocolo de comunicação com o ESP32.',
-                    badge: 'INDISPONÍVEL',
-                    muted: true,
+                        'Busca o BluePulse-ESP32 e recebe IR bruto, movimento e '
+                        'qualidade pelo protocolo BLE v1.',
+                    badge: 'EXPERIMENTAL',
                     action: FilledButton.icon(
                       key: const Key('select-ble-source'),
-                      onPressed: null,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => BleMonitoringScreen(
+                              sessionDraft: sessionDraft.copyWith(
+                                dataOrigin: DataOrigin.ble,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                       icon: const Icon(Icons.bluetooth_rounded),
-                      label: const Text('BLE ainda não disponível'),
+                      label: const Text('Conectar ao ESP32'),
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -116,7 +126,6 @@ class _SourceCard extends StatelessWidget {
     required this.description,
     required this.badge,
     required this.action,
-    this.muted = false,
   });
 
   final IconData icon;
@@ -124,11 +133,10 @@ class _SourceCard extends StatelessWidget {
   final String description;
   final String badge;
   final Widget action;
-  final bool muted;
 
   @override
   Widget build(BuildContext context) {
-    final color = muted ? Colors.blueGrey : const Color(0xFF0284C7);
+    const color = Color(0xFF0284C7);
 
     return Card(
       child: Padding(

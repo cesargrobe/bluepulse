@@ -92,7 +92,7 @@ void main() {
     expect(find.text('Uso experimental'), findsOneWidget);
   });
 
-  testWidgets('oferece simulação e mantém BLE indisponível', (tester) async {
+  testWidgets('oferece simulação e conexão BLE experimental', (tester) async {
     await _goToDataSourceSelection(tester);
 
     expect(find.text('Fonte dos dados'), findsOneWidget);
@@ -102,7 +102,17 @@ void main() {
     final bleButton = tester.widget<FilledButton>(
       find.byKey(const Key('select-ble-source')),
     );
-    expect(bleButton.onPressed, isNull);
+    expect(bleButton.onPressed, isNotNull);
+
+    await tester.ensureVisible(find.byKey(const Key('select-ble-source')));
+    await tester.tap(find.byKey(const Key('select-ble-source')));
+    await tester.pumpAndSettle();
+    expect(find.text('ESP32 pronto para conexão'), findsOneWidget);
+    expect(find.text('DADOS REAIS — PROTÓTIPO'), findsOneWidget);
+    expect(
+      find.textContaining('não realiza diagnóstico clínico'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('percorre os quatro cenários simulados', (tester) async {
