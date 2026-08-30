@@ -136,8 +136,10 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   ESP32, exportação do aplicativo e comparação temporal de amostras.
   Estado em 30/08/2026: firmware gravado e primeira localização, conexão e
   recepção de notificações reais aprovadas no tablet. A captura foi preservada.
-  Permanecem pendentes reconexão, perda de pacotes, comparação simultânea com a
-  serial, exportação e repetição controlada dos estados.
+  A desconexão comandada pelo aplicativo, a nova localização, a reconexão e a
+  retomada da sequência crescente de notificações também foram aprovadas.
+  Permanecem pendentes perda de pacotes, comparação simultânea com a serial,
+  exportação e repetição controlada dos estados.
 
 - [ ] **10. Validar qualidade de sinal e BPM antes de exibi-lo**
   Referência: `especificacao-mvp.md > Regras de segurança e linguagem`

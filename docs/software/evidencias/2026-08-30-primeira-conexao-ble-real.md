@@ -33,6 +33,12 @@ MPU65xx compatível, sem calcular ou exibir BPM não validado.
    `BluePulse-ESP32` no anúncio e o UUID do serviço na resposta de varredura.
 7. Após nova gravação e reinicialização, o tablet localizou, conectou e passou a
    receber notificações do ESP32.
+8. O comando **Desconectar** do aplicativo encerrou a conexão de forma
+   controlada e sem travamento.
+9. Uma nova busca localizou novamente o protótipo, a reconexão foi concluída e
+   a tela voltou ao estado **Recebendo amostras reais**.
+10. O orientador confirmou que o número de sequência continuou aumentando após
+    a reconexão, evidenciando a retomada das notificações BLE.
 
 As falhas intermediárias foram preservadas porque documentam a diferença entre
 o estado interno “anunciando” e um anúncio efetivamente observável pelo cliente.
@@ -72,12 +78,15 @@ representam diagnóstico ou validação clínica.
 | compilação e instalação Android | aprovadas |
 | localização e conexão BLE | aprovadas no tablet |
 | recepção de notificações reais | aprovada no tablet |
+| desconexão comandada pelo aplicativo | aprovada no tablet |
+| nova localização e reconexão | aprovadas no tablet |
+| retomada da sequência de notificações | aprovada; sequência crescente observada |
 
 ## Limites e próximos testes
 
-Esta evidência valida a primeira conexão e recepção. Ainda permanecem pendentes:
+Esta evidência valida a primeira conexão, a recepção, a desconexão controlada e
+a reconexão com retomada das notificações. Ainda permanecem pendentes:
 
-- ensaio controlado de desconexão e reconexão;
 - comparação simultânea entre sequência/valores no monitor serial e no tablet;
 - registro de perda, duplicação ou atraso de pacotes;
 - repetição controlada dos estados sem contato, contato e movimento;

@@ -204,4 +204,12 @@ Depois da nova gravação, o aplicativo localizou e conectou ao ESP32. O Profess
 Gerson registrou a tela recebendo amostras reais, incluindo sequência 732, IR
 5404, movimento 0,131 e MPU65xx válido. A interface manteve BPM, SpO₂ e GSR
 indisponíveis e marcou a amostra como afetada por movimento conforme o limiar
-provisório. Reconexão e comparação simultânea com a serial permanecem abertas.
+provisório.
+
+Na continuação do ensaio, o Professor Gerson acionou a desconexão pelo
+aplicativo e confirmou que ela ocorreu corretamente. Em seguida, o protótipo
+foi localizado novamente e reconectado. A tela retomou a recepção de amostras e
+o número de sequência continuou aumentando. Assim, conexão, desconexão
+controlada, reconexão e retomada das notificações BLE foram aprovadas. A
+comparação simultânea com a serial e a medição de perda, duplicação ou atraso de
+pacotes permanecem abertas.
