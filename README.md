@@ -50,8 +50,9 @@ O primeiro aplicativo Android já foi criado em Flutter. Ele apresenta o aviso
 de uso experimental, solicita um código anônimo e oferece um autorrelato inicial
 provisório. O monitoramento simulado percorre quatro estados reproduzíveis e
 mantém BLE indisponível até sua validação. Os dados ainda permanecem somente na
-memória. Os incrementos passam por análise estática, testes automatizados,
-compilação e execução Android.
+memória. Há também uma sessão automática de 30 segundos e uma primeira pausa
+oceânica visual opcional, ainda sem áudio. Os incrementos passam por análise
+estática, testes automatizados, compilação e execução Android.
 
 ## Documentação e firmware
 
@@ -65,6 +66,7 @@ compilação e execução Android.
 - [Evidência da primeira execução Android](docs/software/evidencias/2026-08-30-primeira-execucao-android.md)
 - [Evidência do código anônimo e autorrelato inicial](docs/software/evidencias/2026-08-30-codigo-anonimo-autorrelato.md)
 - [Evidência da seleção de fonte e monitoramento simulado](docs/software/evidencias/2026-08-30-monitoramento-simulado.md)
+- [Evidência da sessão temporizada e pausa oceânica](docs/software/evidencias/2026-08-30-sessao-temporizada-pausa-oceanica.md)
 - [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)

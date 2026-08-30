@@ -79,6 +79,8 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   implementados; mesma semente reproduz a sequência e BPM, SpO₂ e GSR ficam
   nulos. Os quatro estados foram aprovados visualmente no tablet. Permanecem
   pendentes serialização e cenários temporais ampliados.
+  Um relógio controlável foi implementado e aprovado em teste automatizado; a
+  sessão automática de 30 segundos usa o mesmo simulador.
 
 - [ ] **5. Implementar autorrelato e máquina de estados da sessão**
   Referência: `especificacao-mvp.md > Fluxo obrigatório`
@@ -97,6 +99,10 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   áudio não inicia sem ação do usuário; sessão registra início e fim.
   Verificação: testes do temporizador e revisão manual de legibilidade,
   acessibilidade básica, volume e conforto.
+  Estado em 30/08/2026: iniciado com estímulo visual e orientação respiratória
+  opcional de 30 segundos. Pausar, continuar e interromper foram implementados;
+  temporizador e navegação foram aprovados automaticamente. Áudio, duração
+  configurável, registro de início/fim e avaliação manual continuam pendentes.
 
 - [ ] **7. Implementar armazenamento local e exportação auditável**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`

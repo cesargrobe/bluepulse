@@ -161,3 +161,22 @@ O Professor Gerson testou no tablet a seleção da fonte e confirmou o
 funcionamento adequado do monitoramento. Os quatro estados — sem contato, sinal
 adequado, movimento detectado e falha simulada — foram percorridos com sucesso.
 As amostras artificiais do teste não foram armazenadas.
+
+## 30/08/2026 — sessão temporizada e pausa oceânica visual
+
+Foi acrescentada uma sessão automática de 30 segundos sobre o simulador
+determinístico, preservando a opção manual já aprovada. O relógio permite
+pausar, continuar e cancelar; concluído o monitoramento, o aplicativo oferece
+uma intervenção visual opcional de 30 segundos com orientação respiratória de
+quatro segundos para inspiração e seis para expiração.
+
+Nenhum áudio foi incluído, pois ainda não há um arquivo com autoria, origem e
+licença registradas. A interface declara esse limite e mantém os avisos de que o
+recurso não é tratamento, não realiza diagnóstico clínico e usa dados
+simulados. Os limiares `IR > 5000` e `movimento >= 0.08` permanecem
+provisórios.
+
+Doze testes automatizados foram aprovados, a análise estática não encontrou
+problemas, o APK foi compilado, instalado e aberto no tablet Samsung SM-X810.
+O commit verificado é `e1a43e1`. A avaliação visual e de conforto pelo
+orientador permanece pendente.

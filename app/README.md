@@ -13,9 +13,11 @@ recebe dados reais do protótipo.
 - autorrelato inicial provisório de tensão, tranquilidade e conforto;
 - seleção explícita da origem das amostras;
 - modo simulado determinístico com quatro cenários de qualidade;
+- sessão simulada automática de 30 segundos, com pausa e continuação;
+- pausa oceânica visual opcional de 30 segundos, sem áudio nesta versão;
 - opção BLE visível, porém desabilitada até a validação do protocolo;
 - respostas mantidas somente na memória durante este incremento;
-- BPM, SpO₂, GSR, armazenamento e BLE real ainda não implementados.
+- BPM, SpO₂, GSR, áudio, armazenamento e BLE real ainda não implementados.
 
 ## Verificação
 
