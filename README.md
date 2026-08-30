@@ -52,6 +52,8 @@ precisam de calibração, repetição dos testes e validação em condições va
 - [Visão científica, problema, hipótese e objetivos](docs/pesquisa/visao-geral.md)
 - [Proposta inicial e autoria](docs/pesquisa/proposta-inicial-emanuelle.md)
 - [Evolução conceitual do projeto](docs/pesquisa/evolucao-conceitual.md)
+- [Especificação do MVP do aplicativo](docs/software/especificacao-mvp.md)
+- [Plano passo a passo de testes e validações](docs/software/plano-testes-validacoes.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)
 - [Registro fotográfico de 29/08/2026](docs/imagens/2026-08-29/README.md)
@@ -60,7 +62,9 @@ precisam de calibração, repetição dos testes e validação em condições va
 
 ## Próximas etapas
 
-- integrar a estimativa de frequência cardíaca (BPM);
+- preparar o ambiente Flutter/Android e criar o primeiro fluxo navegável;
+- integrar a estimativa de frequência cardíaca (BPM) somente após validação
+  específica;
 - usar o sinal de movimento como indicador de qualidade da medição;
 - melhorar a tolerância a falhas transitórias de leitura do módulo inercial;
 - calibrar os limiares com um protocolo de testes reproduzível;

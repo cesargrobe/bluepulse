@@ -3,6 +3,10 @@
 > Documento de concepção. Estes requisitos foram discutidos antes da validação
 > do hardware e ainda não representam uma implementação concluída.
 
+O escopo executável adotado está na [especificação do MVP](especificacao-mvp.md),
+e sua sequência de construção está no
+[plano de testes e validações](plano-testes-validacoes.md).
+
 ## Funções propostas
 
 - conectar-se futuramente ao ESP32;

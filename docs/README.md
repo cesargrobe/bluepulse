@@ -38,6 +38,11 @@ integrada.
 ### Software e aquisição
 
 - [Requisitos iniciais do aplicativo](software/requisitos-iniciais.md)
+- [Especificação do MVP Android/Flutter](software/especificacao-mvp.md)
+- [Plano passo a passo de testes e validações](software/plano-testes-validacoes.md)
+- [Ambiente de desenvolvimento do aplicativo](software/ambiente-desenvolvimento.md)
+- [Diário de desenvolvimento do aplicativo](software/diario-desenvolvimento.md)
+- [Decisão 0002 — Flutter com Android primeiro](decisoes/0002-flutter-android-primeiro.md)
 - [Histórico inicial de aquisição](aquisicao/historico-inicial.md)
 
 ### Dados
