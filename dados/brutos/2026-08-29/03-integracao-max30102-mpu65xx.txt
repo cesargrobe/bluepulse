@@ -1,0 +1,249 @@
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+
+------------------------------
+Escaneando: MAX30102 - GPIO32/33
+------------------------------
+Encontrado em: 0x57
+Total encontrado: 1
+
+------------------------------
+Escaneando: MPU65xx - GPIO21/22
+------------------------------
+Encontrado em: 0x68
+Total encontrado: 1
+
+==============================
+Nova leitura em 5 segundos...
+==============================
+IR=939 | A=1.020g | Movimento=0.020 | PARADO | SEM CONTATO
+IR=924 | A=1.015g | Movimento=0.015 | PARADO | SEM CONTATO
+IR=941 | A=0.996g | Movimento=0.004 | PARADO | SEM CONTATO
+IR=921 | A=0.985g | Movimento=0.015 | PARADO | SEM CONTATO
+IR=936 | A=0.968g | Movimento=0.032 | PARADO | SEM CONTATO
+IR=929 | A=0.984g | Movimento=0.016 | PARADO | SEM CONTATO
+IR=935 | A=1.002g | Movimento=0.002 | PARADO | SEM CONTATO
+IR=936 | A=1.025g | Movimento=0.025 | PARADO | SEM CONTATO
+IR=931 | A=1.001g | Movimento=0.001 | PARADO | SEM CONTATO
+IR=935 | A=1.002g | Movimento=0.002 | PARADO | SEM CONTATO
+IR=931 | A=1.010g | Movimento=0.010 | PARADO | SEM CONTATO
+IR=935 | A=1.000g | Movimento=0.000 | PARADO | SEM CONTATO
+IR=937 | A=1.004g | Movimento=0.004 | PARADO | SEM CONTATO
+IR=942 | A=1.053g | Movimento=0.053 | PARADO | SEM CONTATO
+IR=933 | A=1.009g | Movimento=0.009 | PARADO | SEM CONTATO
+IR=938 | A=1.016g | Movimento=0.016 | PARADO | SEM CONTATO
+IR=928 | A=1.004g | Movimento=0.004 | PARADO | SEM CONTATO
+IR=929 | A=1.021g | Movimento=0.021 | PARADO | SEM CONTATO
+IR=941 | A=0.946g | Movimento=0.054 | PARADO | SEM CONTATO
+IR=926 | A=0.997g | Movimento=0.003 | PARADO | SEM CONTATO
+IR=941 | A=1.018g | Movimento=0.018 | PARADO | SEM CONTATO
+IR=925 | A=1.026g | Movimento=0.026 | PARADO | SEM CONTATO
+IR=939 | A=1.000g | Movimento=0.000 | PARADO | SEM CONTATO
+IR=905 | A=1.005g | Movimento=0.005 | PARADO | SEM CONTATO
+IR=921 | A=1.043g | Movimento=0.043 | PARADO | SEM CONTATO
+IR=920 | A=1.003g | Movimento=0.003 | PARADO | SEM CONTATO
+IR=918 | A=1.019g | Movimento=0.019 | PARADO | SEM CONTATO
+IR=928 | A=1.055g | Movimento=0.055 | PARADO | SEM CONTATO
+IR=924 | A=1.006g | Movimento=0.006 | PARADO | SEM CONTATO
+IR=980 | A=1.003g | Movimento=0.003 | PARADO | SEM CONTATO
+IR=956 | A=0.954g | Movimento=0.046 | PARADO | SEM CONTATO
+IR=965 | A=0.982g | Movimento=0.018 | PARADO | SEM CONTATO
+IR=983 | A=0.990g | Movimento=0.010 | PARADO | SEM CONTATO
+IR=1009 | A=1.002g | Movimento=0.002 | PARADO | SEM CONTATO
+IR=1150 | A=1.014g | Movimento=0.014 | PARADO | SEM CONTATO
+IR=1193 | A=1.011g | Movimento=0.011 | PARADO | SEM CONTATO
+IR=1065 | A=0.997g | Movimento=0.003 | PARADO | SEM CONTATO
+IR=999 | A=1.001g | Movimento=0.001 | PARADO | SEM CONTATO
+IR=985 | A=0.991g | Movimento=0.009 | PARADO | SEM CONTATO
+IR=987 | A=0.942g | Movimento=0.058 | PARADO | SEM CONTATO
+IR=991 | A=1.004g | Movimento=0.004 | PARADO | SEM CONTATO
+IR=982 | A=1.017g | Movimento=0.017 | PARADO | SEM CONTATO
+IR=1012 | A=0.996g | Movimento=0.004 | PARADO | SEM CONTATO
+IR=1092 | A=1.059g | Movimento=0.059 | PARADO | SEM CONTATO
+IR=1402 | A=1.022g | Movimento=0.022 | PARADO | SEM CONTATO
+IR=2488 | A=1.003g | Movimento=0.003 | PARADO | SEM CONTATO
+IR=4020 | A=1.009g | Movimento=0.009 | PARADO | SEM CONTATO
+IR=7076 | A=1.004g | Movimento=0.004 | PARADO | SENSOR EM CONTATO
+IR=13818 | A=1.018g | Movimento=0.018 | PARADO | SENSOR EM CONTATO
+IR=19810 | A=1.011g | Movimento=0.011 | PARADO | SENSOR EM CONTATO
+IR=41685 | A=1.015g | Movimento=0.015 | PARADO | SENSOR EM CONTATO
+IR=62472 | A=1.021g | Movimento=0.021 | PARADO | SENSOR EM CONTATO
+IR=61366 | A=1.004g | Movimento=0.004 | PARADO | SENSOR EM CONTATO
+IR=65333 | A=1.004g | Movimento=0.004 | PARADO | SENSOR EM CONTATO
+IR=66931 | A=1.003g | Movimento=0.003 | PARADO | SENSOR EM CONTATO
+IR=67601 | A=1.004g | Movimento=0.004 | PARADO | SENSOR EM CONTATO
+IR=69699 | A=1.010g | Movimento=0.010 | PARADO | SENSOR EM CONTATO
+IR=70961 | A=1.014g | Movimento=0.014 | PARADO | SENSOR EM CONTATO
+IR=72016 | A=1.009g | Movimento=0.009 | PARADO | SENSOR EM CONTATO
+IR=72528 | A=1.018g | Movimento=0.018 | PARADO | SENSOR EM CONTATO
+IR=72690 | A=0.999g | Movimento=0.001 | PARADO | SENSOR EM CONTATO
+IR=72452 | A=1.016g | Movimento=0.016 | PARADO | SENSOR EM CONTATO
+IR=72439 | A=1.006g | Movimento=0.006 | PARADO | SENSOR EM CONTATO
+IR=72594 | A=1.010g | Movimento=0.010 | PARADO | SENSOR EM CONTATO
+IR=72444 | A=1.009g | Movimento=0.009 | PARADO | SENSOR EM CONTATO
+IR=72309 | A=1.013g | Movimento=0.013 | PARADO | SENSOR EM CONTATO
+IR=72425 | A=1.012g | Movimento=0.012 | PARADO | SENSOR EM CONTATO
+IR=72657 | A=1.003g | Movimento=0.003 | PARADO | SENSOR EM CONTATO
+IR=72651 | A=1.007g | Movimento=0.007 | PARADO | SENSOR EM CONTATO
+IR=72785 | A=1.011g | Movimento=0.011 | PARADO | SENSOR EM CONTATO
+IR=73025 | A=1.002g | Movimento=0.002 | PARADO | SENSOR EM CONTATO
+IR=73071 | A=0.999g | Movimento=0.001 | PARADO | SENSOR EM CONTATO
+IR=73019 | A=1.023g | Movimento=0.023 | PARADO | SENSOR EM CONTATO
+IR=73092 | A=1.006g | Movimento=0.006 | PARADO | SENSOR EM CONTATO
+IR=73118 | A=0.982g | Movimento=0.018 | PARADO | SENSOR EM CONTATO
+IR=73096 | A=1.003g | Movimento=0.003 | PARADO | SENSOR EM CONTATO
+IR=73263 | A=1.007g | Movimento=0.007 | PARADO | SENSOR EM CONTATO
+IR=73457 | A=1.001g | Movimento=0.001 | PARADO | SENSOR EM CONTATO
+IR=73421 | A=1.045g | Movimento=0.045 | PARADO | SENSOR EM CONTATO
+IR=73150 | A=0.994g | Movimento=0.006 | PARADO | SENSOR EM CONTATO
+IR=73030 | A=1.025g | Movimento=0.025 | PARADO | SENSOR EM CONTATO
+IR=12559 | A=1.099g | Movimento=0.099 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=13439 | A=1.034g | Movimento=0.034 | PARADO | SENSOR EM CONTATO
+IR=14089 | A=1.045g | Movimento=0.045 | PARADO | SENSOR EM CONTATO
+IR=14893 | A=0.957g | Movimento=0.043 | PARADO | SENSOR EM CONTATO
+IR=17036 | A=1.007g | Movimento=0.007 | PARADO | SENSOR EM CONTATO
+IR=32651 | A=1.013g | Movimento=0.013 | PARADO | SENSOR EM CONTATO
+IR=46750 | A=1.045g | Movimento=0.045 | PARADO | SENSOR EM CONTATO
+IR=15050 | A=1.015g | Movimento=0.015 | PARADO | SENSOR EM CONTATO
+IR=35053 | A=1.028g | Movimento=0.028 | PARADO | SENSOR EM CONTATO
+IR=70785 | A=1.620g | Movimento=0.620 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=92049 | A=0.984g | Movimento=0.016 | PARADO | SENSOR EM CONTATO
+IR=92209 | A=0.903g | Movimento=0.097 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91589 | A=1.604g | Movimento=0.604 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91088 | A=2.194g | Movimento=1.194 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=92001 | A=1.769g | Movimento=0.769 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=92116 | A=1.221g | Movimento=0.221 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91766 | A=1.133g | Movimento=0.133 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=92129 | A=1.763g | Movimento=0.763 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91398 | A=0.790g | Movimento=0.210 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91221 | A=1.052g | Movimento=0.052 | PARADO | SENSOR EM CONTATO
+IR=90793 | A=1.393g | Movimento=0.393 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91162 | A=0.944g | Movimento=0.056 | PARADO | SENSOR EM CONTATO
+IR=91457 | A=0.929g | Movimento=0.071 | PARADO | SENSOR EM CONTATO
+IR=90918 | A=1.077g | Movimento=0.077 | PARADO | SENSOR EM CONTATO
+IR=91201 | A=0.890g | Movimento=0.110 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91474 | A=0.947g | Movimento=0.053 | PARADO | SENSOR EM CONTATO
+IR=91237 | A=1.231g | Movimento=0.231 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91289 | A=1.089g | Movimento=0.089 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91379 | A=1.007g | Movimento=0.007 | PARADO | SENSOR EM CONTATO
+IR=91662 | A=1.071g | Movimento=0.071 | PARADO | SENSOR EM CONTATO
+IR=91915 | A=1.078g | Movimento=0.078 | PARADO | SENSOR EM CONTATO
+IR=91252 | A=1.619g | Movimento=0.619 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=91091 | A=1.085g | Movimento=0.085 | EM MOVIMENTO | SENSOR EM CONTATO
+IR=90478 | A=1.009g | Movimento=0.009 | PARADO | SENSOR EM CONTATO
+IR=85580 | A=0.975g | Movimento=0.025 | PARADO | SENSOR EM CONTATO
+IR=13791 | A=1.033g | Movimento=0.033 | PARADO | SENSOR EM CONTATO
+IR=2805 | A=0.764g | Movimento=0.236 | EM MOVIMENTO | SEM CONTATO
+IR=1913 | A=1.021g | Movimento=0.021 | PARADO | SEM CONTATO
+IR=986 | A=1.000g | Movimento=0.000 | PARADO | SEM CONTATO
+IR=867 | A=1.012g | Movimento=0.012 | PARADO | SEM CONTATO
+IR=874 | A=1.063g | Movimento=0.063 | PARADO | SEM CONTATO
+IR=874 | A=1.001g | Movimento=0.001 | PARADO | SEM CONTATO
+IR=856 | A=1.010g | Movimento=0.010 | PARADO | SEM CONTATO
+IR=881 | A=1.006g | Movimento=0.006 | PARADO | SEM CONTATO
+IR=867 | A=1.002g | Movimento=0.002 | PARADO | SEM CONTATO
+IR=873 | A=1.017g | Movimento=0.017 | PARADO | SEM CONTATO
+IR=882 | A=1.023g | Movimento=0.023 | PARADO | SEM CONTATO
+IR=871 | A=1.016g | Movimento=0.016 | PARADO | SEM CONTATO
+IR=875 | A=1.010g | Movimento=0.010 | PARADO | SEM CONTATO
+IR=858 | A=1.014g | Movimento=0.014 | PARADO | SEM CONTATO
+IR=869 | A=1.028g | Movimento=0.028 | PARADO | SEM CONTATO
+IR=867 | A=1.007g | Movimento=0.007 | PARADO | SEM CONTATO
+IR=867 | A=1.007g | Movimento=0.007 | PARADO | SEM CONTATO
+IR=871 | A=1.017g | Movimento=0.017 | PARADO | SEM CONTATO
+IR=857 | A=1.007g | Movimento=0.007 | PARADO | SEM CONTATO
+IR=873 | A=1.007g | Movimento=0.007 | PARADO | SEM CONTATO
