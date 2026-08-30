@@ -51,19 +51,25 @@ será incluído quando autoria, origem e licença puderem ser registradas.
 | compilação Android de depuração | aprovada |
 | instalação no tablet Samsung SM-X810 | aprovada |
 | abertura automática do aplicativo | aprovada |
-| avaliação visual e de conforto pelo orientador | pendente |
+| avaliação visual e de conforto pelo orientador | aprovada |
 
 Os testes automatizados confirmaram que o relógio inicia, pausa, continua e
 termina, que o tempo não avança durante a pausa e que a tela da intervenção só
 é apresentada após a conclusão do monitoramento. Também foi verificada a
 presença do aviso sobre áudio e da declaração de ausência de diagnóstico.
 
-## Decisão e próximo portão
+## Avaliação manual e decisão
 
-O incremento está tecnicamente apto para avaliação manual. Antes de considerar
-esta etapa aprovada, o orientador deverá percorrer no tablet o monitoramento de
-30 segundos e a pausa visual, observando legibilidade, funcionamento de pausa e
-continuação, clareza das instruções e eventual desconforto.
+O Professor Gerson Cesar Grobe de Miranda percorreu todo o fluxo no tablet em
+30/08/2026 e informou que o processo funcionou corretamente. Com essa
+confirmação, ficam aprovados neste incremento o monitoramento temporizado, os
+controles de pausa e continuação, a transição ao término e a pausa oceânica
+visual. Não foi relatado problema de legibilidade, funcionamento ou conforto
+durante essa avaliação interna.
+
+A aprovação se limita ao funcionamento e à apresentação do protótipo. Ela não
+constitui validação clínica, avaliação de eficácia ou autorização para coleta
+com participantes.
 
 Ainda não há autorização para coleta com participantes, inferência de estresse
 ou ansiedade, exibição de BPM, inclusão de áudio ou alegação de eficácia.

@@ -101,8 +101,9 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   acessibilidade básica, volume e conforto.
   Estado em 30/08/2026: iniciado com estímulo visual e orientação respiratória
   opcional de 30 segundos. Pausar, continuar e interromper foram implementados;
-  temporizador e navegação foram aprovados automaticamente. Áudio, duração
-  configurável, registro de início/fim e avaliação manual continuam pendentes.
+  temporizador e navegação foram aprovados automaticamente, e o orientador
+  aprovou o fluxo visual no tablet. Áudio, duração configurável e registro de
+  início/fim continuam pendentes.
 
 - [ ] **7. Implementar armazenamento local e exportação auditável**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`

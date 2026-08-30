@@ -178,5 +178,12 @@ provisórios.
 
 Doze testes automatizados foram aprovados, a análise estática não encontrou
 problemas, o APK foi compilado, instalado e aberto no tablet Samsung SM-X810.
-O commit verificado é `e1a43e1`. A avaliação visual e de conforto pelo
-orientador permanece pendente.
+O commit verificado é `e1a43e1`.
+
+### Aprovação da sessão temporizada e da pausa visual
+
+O Professor Gerson percorreu todo o processo no tablet e confirmou que tudo
+funcionou corretamente. A avaliação interna aprovou o monitoramento de 30
+segundos, a pausa e continuação, a transição ao final e a intervenção visual.
+Não foi relatado problema de legibilidade, funcionamento ou conforto. Essa
+aprovação não representa validação clínica ou comprovação de eficácia.
