@@ -122,6 +122,10 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   pacote inválido é rejeitado sem encerrar o aplicativo.
   Verificação: testes unitários do codificador/decodificador e teste de
   desconexão/reconexão simulada.
+  Estado em 30/08/2026: pacote binário v1, UUIDs, unidades e frequência foram
+  documentados; o decodificador rejeita tamanho e versão incompatíveis em teste
+  automatizado. A primeira recepção real foi aprovada. Permanecem pendentes o
+  adaptador BLE falso e os cenários simulados de desconexão/reconexão.
 
 - [ ] **9. Integrar ESP32 e executar ensaio de hardware em circuito fechado**
   Referência: `especificacao-mvp.md > Definição de concluído`
@@ -130,6 +134,10 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   contato e movimento; registrar perda de pacotes e falhas.
   Verificação: ensaio datado com firmware/commit, vídeo ou fotografias, log do
   ESP32, exportação do aplicativo e comparação temporal de amostras.
+  Estado em 30/08/2026: firmware gravado e primeira localização, conexão e
+  recepção de notificações reais aprovadas no tablet. A captura foi preservada.
+  Permanecem pendentes reconexão, perda de pacotes, comparação simultânea com a
+  serial, exportação e repetição controlada dos estados.
 
 - [ ] **10. Validar qualidade de sinal e BPM antes de exibi-lo**
   Referência: `especificacao-mvp.md > Regras de segurança e linguagem`

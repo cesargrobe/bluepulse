@@ -187,3 +187,21 @@ funcionou corretamente. A avaliação interna aprovou o monitoramento de 30
 segundos, a pausa e continuação, a transição ao final e a intervenção visual.
 Não foi relatado problema de legibilidade, funcionamento ou conforto. Essa
 aprovação não representa validação clínica ou comprovação de eficácia.
+
+## 30/08/2026 — primeira conexão BLE real
+
+Foi definido o protocolo binário BluePulse BLE v1 e criado um firmware separado
+para transmitir sequência, IR bruto, movimento e validade do MPU65xx a cada 200
+ms. BPM, SpO₂ e GSR não fazem parte do pacote.
+
+A integração exigiu diagnosticar três ocorrências: modo de gravação manual pelo
+botão BOOT, Bluetooth inicialmente desligado no tablet e anúncio BLE não
+observável apesar do estado interno `BLE=ANUNCIANDO`. O anúncio foi corrigido
+para declarar explicitamente o nome no pacote principal e o UUID na resposta de
+varredura.
+
+Depois da nova gravação, o aplicativo localizou e conectou ao ESP32. O Professor
+Gerson registrou a tela recebendo amostras reais, incluindo sequência 732, IR
+5404, movimento 0,131 e MPU65xx válido. A interface manteve BPM, SpO₂ e GSR
+indisponíveis e marcou a amostra como afetada por movimento conforme o limiar
+provisório. Reconexão e comparação simultânea com a serial permanecem abertas.

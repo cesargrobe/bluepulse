@@ -1,8 +1,8 @@
 # Aplicativo BluePulse
 
 Aplicativo Android experimental do projeto acadêmico BluePulse, desenvolvido
-em Flutter. O código está no primeiro incremento do fluxo navegável e ainda não
-recebe dados reais do protótipo.
+em Flutter. O fluxo já recebe amostras técnicas reais do ESP32 por BLE, além de
+manter o modo simulado para testes reproduzíveis.
 
 ## Estado atual
 
@@ -15,9 +15,10 @@ recebe dados reais do protótipo.
 - modo simulado determinístico com quatro cenários de qualidade;
 - sessão simulada automática de 30 segundos, com pausa e continuação;
 - pausa oceânica visual opcional de 30 segundos, sem áudio nesta versão;
-- opção BLE visível, porém desabilitada até a validação do protocolo;
+- conexão BLE experimental pelo protocolo BluePulse v1;
+- recepção de IR bruto, movimento, validade do MPU e sequência;
 - respostas mantidas somente na memória durante este incremento;
-- BPM, SpO₂, GSR, áudio, armazenamento e BLE real ainda não implementados.
+- BPM, SpO₂, GSR, áudio e armazenamento ainda não implementados.
 
 ## Verificação
 

@@ -19,6 +19,7 @@ pergunta específica do ensaio.
 | 11 | [`integracao_max30102_mpu65xx`](integracao_max30102_mpu65xx/integracao_max30102_mpu65xx.ino) | combinar IR e movimento | operação simultânea validada em bancada |
 | 12 | [`max30102_oled`](max30102_oled/max30102_oled.ino) | compartilhar OLED e MAX30102 | ambos inicializaram em GPIO32/33 |
 | 13 | [`integracao_sensores_oled`](integracao_sensores_oled/integracao_sensores_oled.ino) | integrar MAX30102, MPU65xx e OLED | operação simultânea validada em bancada |
+| 14 | [`bluepulse_ble_integracao`](bluepulse_ble_integracao/bluepulse_ble_integracao.ino) | transmitir IR, movimento e qualidade pelo protocolo BLE v1 | primeira conexão e recepção real validadas no tablet |
 
 ## Observações
 

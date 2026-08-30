@@ -48,8 +48,9 @@ precisam de calibração, repetição dos testes e validação em condições va
 
 O primeiro aplicativo Android já foi criado em Flutter. Ele apresenta o aviso
 de uso experimental, solicita um código anônimo e oferece um autorrelato inicial
-provisório. O monitoramento simulado percorre quatro estados reproduzíveis e
-mantém BLE indisponível até sua validação. Os dados ainda permanecem somente na
+provisório. O monitoramento simulado percorre quatro estados reproduzíveis. A
+primeira conexão BLE real com o ESP32 já foi realizada, transmitindo IR bruto,
+movimento e qualidade pelo protocolo v1; os dados ainda permanecem somente na
 memória. Há também uma sessão automática de 30 segundos e uma primeira pausa
 oceânica visual opcional, ainda sem áudio. Os incrementos passam por análise
 estática, testes automatizados, compilação e execução Android.
@@ -67,6 +68,7 @@ estática, testes automatizados, compilação e execução Android.
 - [Evidência do código anônimo e autorrelato inicial](docs/software/evidencias/2026-08-30-codigo-anonimo-autorrelato.md)
 - [Evidência da seleção de fonte e monitoramento simulado](docs/software/evidencias/2026-08-30-monitoramento-simulado.md)
 - [Evidência da sessão temporizada e pausa oceânica](docs/software/evidencias/2026-08-30-sessao-temporizada-pausa-oceanica.md)
+- [Evidência da primeira conexão BLE real](docs/software/evidencias/2026-08-30-primeira-conexao-ble-real.md)
 - [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)
