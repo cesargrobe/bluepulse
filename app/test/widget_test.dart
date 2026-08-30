@@ -12,20 +12,81 @@ void main() {
       find.textContaining('não realiza diagnóstico clínico'),
       findsOneWidget,
     );
-    expect(find.text('Iniciar sessão simulada'), findsOneWidget);
+    expect(find.text('Iniciar sessão experimental'), findsOneWidget);
   });
 
-  testWidgets('abre e encerra a preparação simulada', (tester) async {
+  testWidgets('exige código anônimo válido e confirmação de privacidade', (
+    tester,
+  ) async {
     await tester.pumpWidget(const BluePulseApp());
 
-    await tester.tap(find.byKey(const Key('start-simulated-session')));
+    await tester.tap(find.byKey(const Key('start-session')));
     await tester.pumpAndSettle();
 
-    expect(find.text('Preparação da sessão'), findsOneWidget);
-    expect(find.text('Modo simulado'), findsOneWidget);
-    expect(find.textContaining('identificados como simulados'), findsOneWidget);
+    expect(find.text('Código anônimo'), findsOneWidget);
+    await tester.enterText(find.byKey(const Key('session-code-field')), 'AB');
+    await tester.tap(find.byKey(const Key('continue-to-self-report')));
+    await tester.pump();
 
-    await tester.tap(find.text('Voltar'));
+    expect(find.text('Use pelo menos 3 caracteres.'), findsOneWidget);
+    expect(
+      find.text('Esta confirmação é necessária para continuar.'),
+      findsOneWidget,
+    );
+    expect(find.text('Autorrelato inicial'), findsNothing);
+  });
+
+  testWidgets('conclui o autorrelato inicial sem interpretação clínica', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const BluePulseApp());
+
+    await tester.tap(find.byKey(const Key('start-session')));
+    await tester.pumpAndSettle();
+    await tester.enterText(
+      find.byKey(const Key('session-code-field')),
+      'bp-001',
+    );
+    await tester.tap(find.byKey(const Key('privacy-confirmation')));
+    await tester.tap(find.byKey(const Key('continue-to-self-report')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Autorrelato inicial'), findsOneWidget);
+    expect(find.text('Sessão BP-001'), findsOneWidget);
+
+    final finishButton = tester.widget<FilledButton>(
+      find.byKey(const Key('finish-initial-self-report')),
+    );
+    expect(finishButton.onPressed, isNull);
+
+    for (final key in const ['tension-3', 'tranquility-4', 'comfort-5']) {
+      final option = find.byKey(Key(key));
+      await tester.ensureVisible(option);
+      await tester.tap(option);
+      await tester.pump();
+    }
+    await tester.ensureVisible(
+      find.byKey(const Key('finish-initial-self-report')),
+    );
+    await tester.tap(find.byKey(const Key('finish-initial-self-report')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Autorrelato inicial concluído'), findsOneWidget);
+    expect(find.textContaining('somente na memória'), findsOneWidget);
+    expect(
+      find.textContaining('não representam uma avaliação clínica'),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets('permite cancelar a preparação e voltar ao início', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const BluePulseApp());
+
+    await tester.tap(find.byKey(const Key('start-session')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Cancelar e voltar'));
     await tester.pumpAndSettle();
 
     expect(find.text('Uso experimental'), findsOneWidget);
