@@ -1,0 +1,56 @@
+# Documentação do BluePulse
+
+Este diretório funciona como índice do caderno de engenharia e pesquisa do
+BluePulse. Os registros preservam tanto resultados positivos quanto falhas,
+incertezas e mudanças de decisão.
+
+## Registros disponíveis
+
+### Arquitetura
+
+- [Arquitetura de hardware validada](hardware/README.md)
+- [Decisão 0001 — adoção de dois barramentos I²C](decisoes/0001-dois-barramentos-i2c.md)
+
+### Diário de bordo e experimentos
+
+- [Diário de bordo de 29/08/2026](diario-de-bordo/2026-08-29.md)
+- [Relatório do experimento de integração](experimentos/2026-08-29-integracao-hardware.md)
+
+O diário apresenta a sequência de trabalho e as decisões. O relatório de
+experimento descreve, de forma mais concentrada, a validação da arquitetura
+integrada.
+
+### Método de registro
+
+- [Protocolo para documentação de ensaios](metodologia/registro-de-ensaios.md)
+
+### Dados
+
+- [Manifesto dos dados brutos de 29/08/2026](../dados/brutos/2026-08-29/README.md)
+
+### Firmware experimental
+
+Os sketches estão no [índice de firmware experimental](../firmware/testes/README.md). Cada pasta é uma
+etapa independente e mantém o nome exigido pela estrutura de sketches do
+Arduino.
+
+## Convenções de evidência
+
+Os documentos procuram separar quatro categorias:
+
+- **observação:** saída registrada diretamente pelo equipamento ou pelo
+  software;
+- **interpretação:** explicação considerada compatível com as observações;
+- **hipótese:** explicação ainda não confirmada por teste específico;
+- **decisão:** escolha de projeto adotada para permitir a continuidade do
+  trabalho.
+
+Quando um registro é reconstruído posteriormente, isso deve ser declarado. Não
+devem ser acrescentados horários, instrumentos, condições ambientais ou
+resultados que não tenham sido anotados durante o ensaio.
+
+## Escopo científico e clínico
+
+O BluePulse é um protótipo experimental. Os registros deste repositório não
+demonstram validade diagnóstica ou clínica. O sistema não substitui avaliação
+profissional e não deve orientar decisões médicas.

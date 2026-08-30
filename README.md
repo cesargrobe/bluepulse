@@ -37,9 +37,11 @@ precisam de calibração, repetição dos testes e validação em condições va
 
 ## Documentação e firmware
 
+- [Índice completo da documentação](docs/README.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)
 - [Firmware de integração dos sensores e OLED](firmware/testes/integracao_sensores_oled/integracao_sensores_oled.ino)
+- [Dados brutos preservados](dados/brutos/2026-08-29/README.md)
 
 ## Próximas etapas
 
