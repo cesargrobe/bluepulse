@@ -48,16 +48,17 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
 
       await _scanSubscription?.cancel();
       _scanSubscription = FlutterBluePlus.onScanResults.listen((results) {
-        for (final result in results) {
-          if (result.advertisementData.advName == bluePulseDeviceName) {
-            FlutterBluePlus.stopScan();
-            if (mounted) {
-              setState(() {
-                _device = result.device;
-                _stage = _BleStage.found;
-              });
-            }
-            return;
+        if (results.isNotEmpty) {
+          // A busca já é filtrada pelo UUID exclusivo do serviço BluePulse.
+          // O nome pode chegar vazio em alguns adaptadores BLE e não deve ser
+          // usado como segundo requisito para reconhecer o protótipo.
+          final result = results.first;
+          FlutterBluePlus.stopScan();
+          if (mounted) {
+            setState(() {
+              _device = result.device;
+              _stage = _BleStage.found;
+            });
           }
         }
       });
