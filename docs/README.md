@@ -44,6 +44,7 @@ integrada.
 - [Diário de desenvolvimento do aplicativo](software/diario-desenvolvimento.md)
 - [Evidência da primeira execução Android](software/evidencias/2026-08-30-primeira-execucao-android.md)
 - [Evidência do código anônimo e autorrelato inicial](software/evidencias/2026-08-30-codigo-anonimo-autorrelato.md)
+- [Evidência da seleção de fonte e monitoramento simulado](software/evidencias/2026-08-30-monitoramento-simulado.md)
 - [Proposta visual e análise de design](software/design/proposta-visual-2026-08-30.md)
 - [Decisão 0002 — Flutter com Android primeiro](decisoes/0002-flutter-android-primeiro.md)
 - [Histórico inicial de aquisição](aquisicao/historico-inicial.md)

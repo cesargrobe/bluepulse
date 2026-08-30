@@ -141,3 +141,16 @@ O Professor Gerson percorreu no tablet o código anônimo, a confirmação de
 privacidade, as três escalas do autorrelato e o aviso de conclusão. O
 funcionamento e a legibilidade foram aprovados. Código e respostas usados no
 teste não foram registrados, respeitando a minimização de dados.
+
+## 30/08/2026 — fonte de dados e monitoramento simulado
+
+Foi criada a seleção entre modo simulado e BLE. Somente a simulação está
+habilitada; BLE permanece visível como etapa futura e nenhuma permissão foi
+solicitada. O simulador usa semente derivada do código da sessão e percorre sem
+contato, sinal adequado, movimento e falha transitória.
+
+A interface identifica permanentemente os dados como simulados, mantém BPM,
+SpO₂ e GSR indisponíveis e repete que `IR > 5000` e `movimento >= 0.08` são
+limiares provisórios. Nove testes foram aprovados, a análise estática não
+encontrou problemas e o APK foi instalado no tablet. O commit verificado é
+`3a453ff`; a avaliação visual permanece pendente.

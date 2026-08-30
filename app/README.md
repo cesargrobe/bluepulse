@@ -11,8 +11,11 @@ recebe dados reais do protótipo.
 - identificação por código anônimo, sem dados pessoais;
 - confirmação de privacidade antes de avançar;
 - autorrelato inicial provisório de tensão, tranquilidade e conforto;
+- seleção explícita da origem das amostras;
+- modo simulado determinístico com quatro cenários de qualidade;
+- opção BLE visível, porém desabilitada até a validação do protocolo;
 - respostas mantidas somente na memória durante este incremento;
-- dados fisiológicos reais, armazenamento e BLE ainda não implementados.
+- BPM, SpO₂, GSR, armazenamento e BLE real ainda não implementados.
 
 ## Verificação
 
