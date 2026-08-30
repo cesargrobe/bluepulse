@@ -38,6 +38,14 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
         throw Exception('Este aparelho não oferece Bluetooth Low Energy.');
       }
 
+      if (FlutterBluePlus.adapterStateNow != BluetoothAdapterState.on) {
+        await FlutterBluePlus.turnOn(timeout: 15);
+        await FlutterBluePlus.adapterState
+            .where((state) => state == BluetoothAdapterState.on)
+            .first
+            .timeout(const Duration(seconds: 15));
+      }
+
       await _scanSubscription?.cancel();
       _scanSubscription = FlutterBluePlus.onScanResults.listen((results) {
         for (final result in results) {
@@ -320,6 +328,10 @@ String _friendlyError(Object error) {
   final text = error.toString();
   if (text.toLowerCase().contains('permission')) {
     return 'A permissão de dispositivos próximos não foi concedida. Autorize-a para buscar o ESP32.';
+  }
+  if (text.toLowerCase().contains('bluetooth') &&
+      text.toLowerCase().contains('turned on')) {
+    return 'O Bluetooth do tablet está desligado. Ative-o no painel rápido e toque novamente em Buscar BluePulse-ESP32.';
   }
   if (text.contains('timeout')) {
     return 'A conexão excedeu o tempo esperado. Verifique o ESP32 e tente novamente.';
