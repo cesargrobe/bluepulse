@@ -92,6 +92,29 @@ Hashes SHA-256 dos arquivos originais:
 | `tela-inicial-bluepulse.png` | `5D61C11250C45BA17E8AC62DAD379F68EB567382A5C99121A578919884506FCA` |
 | `modo-simulado-bluepulse.png` | `D17BA3D2E639E393113191E51EFA6E29D6D004CB5F22282FE562F05936EE7E13` |
 
+## Validação em dispositivo físico
+
+O APK também foi instalado por USB em um tablet físico, sem registrar no
+repositório o identificador único do aparelho.
+
+| Característica | Valor observado |
+| --- | --- |
+| fabricante | Samsung |
+| modelo | SM-X810 |
+| sistema | Android 16, API 36 |
+| resolução física informada | 1752 × 2800 pixels |
+| instalação do APK | sucesso |
+| abertura da atividade principal | sucesso |
+| avaliação do orientador | funcionamento confirmado |
+
+O orientador verificou o aplicativo no tablet e autorizou o uso desse aparelho
+nas próximas etapas. A interface também foi observada em orientação horizontal:
+
+![BluePulse executado no tablet Samsung SM-X810](imagens/2026-08-30/bluepulse-tablet-sm-x810.png)
+
+SHA-256 da captura original:
+`E46F24892CEAC3355FC6F24BDCA94A89ED1BE94EA8E0CE3E3C0A1652882A1240`.
+
 ## Decisão
 
 O ambiente Android está apto, o item 2 do plano foi concluído com a exceção

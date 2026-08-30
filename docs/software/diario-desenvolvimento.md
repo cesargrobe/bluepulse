@@ -97,3 +97,12 @@ emulador `Pixel_7a`. A tela inicial, o aviso experimental, a autoria, a
 orientação e a tela de preparação simulada foram visualizados. A navegação de
 ida e volta funcionou, e o orientador confirmou que o incremento estava
 correto. As duas capturas recebidas foram anexadas à evidência datada.
+
+### Validação em tablet físico
+
+Um tablet Samsung SM-X810 foi conectado por USB com depuração autorizada. O APK
+foi instalado e aberto diretamente no aparelho. O dispositivo executava Android
+16/API 36 e informou resolução física de 1752 × 2800 pixels. O orientador
+confirmou o funcionamento e autorizou o uso do tablet nas próximas etapas,
+inclusive para a futura integração BLE. O identificador único do aparelho não
+foi incluído no repositório.
