@@ -5,6 +5,14 @@
 > abaixo organizam as ideias discutidas, mas ainda requerem aprovação formal da
 > equipe e adequação ao futuro protocolo de pesquisa.
 
+## Origem e autoria da proposta
+
+A proposta inicial de integrar um aplicativo inspirado em *blue spaces* a um
+relógio inteligente foi idealizada e apresentada pela estudante **Emanuelle
+Pinheiro da Silva**, do 9º ano, sob orientação do **Professor Gerson Cesar Grobe
+de Miranda**. O texto original, sua evolução e o artigo apresentado estão
+registrados em [Proposta inicial apresentada por Emanuelle Pinheiro da Silva](proposta-inicial-emanuelle.md).
+
 ## Contexto
 
 *Blue Spaces* são ambientes naturais ou representações sensoriais associados à

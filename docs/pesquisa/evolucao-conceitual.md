@@ -3,6 +3,10 @@
 Este registro recompõe a trajetória discutida na conversa “Blue Space e Saúde
 Mental”. Ele diferencia propostas, decisões e resultados observados.
 
+A origem autoral da proposta de aplicativo e relógio está documentada em
+[Proposta inicial apresentada por Emanuelle Pinheiro da Silva](proposta-inicial-emanuelle.md),
+desenvolvida sob orientação do Professor Gerson Cesar Grobe de Miranda.
+
 ## 1. Laboratório digital de *Blue Spaces*
 
 A ideia inicial foi um aplicativo que registrasse um check-in antes e depois de

@@ -4,6 +4,17 @@ Sistema vestível experimental de biofeedback e monitoramento fisiológico volta
 à identificação de alterações de ativação fisiológica e ao apoio a estratégias
 de autorregulação associadas aos *Blue Spaces*.
 
+## Origem do projeto
+
+A proposta inicial de um aplicativo inspirado nos benefícios dos *blue spaces*,
+integrado a um relógio inteligente, foi idealizada e apresentada pela estudante
+**Emanuelle Pinheiro da Silva**, matriculada no 9º ano, sob orientação do
+**Professor Gerson Cesar Grobe de Miranda**.
+
+O [registro da proposta inicial](docs/pesquisa/proposta-inicial-emanuelle.md)
+preserva o problema, a justificativa, os objetivos, o resumo e o artigo
+apresentado pela estudante.
+
 ## Objetivo
 
 O BluePulse investiga a integração de sinais fisiológicos e de movimento em um
@@ -39,6 +50,7 @@ precisam de calibração, repetição dos testes e validação em condições va
 
 - [Índice completo da documentação](docs/README.md)
 - [Visão científica, problema, hipótese e objetivos](docs/pesquisa/visao-geral.md)
+- [Proposta inicial e autoria](docs/pesquisa/proposta-inicial-emanuelle.md)
 - [Evolução conceitual do projeto](docs/pesquisa/evolucao-conceitual.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)

@@ -8,9 +8,11 @@ incertezas e mudanças de decisão.
 
 ### Fundamentação e evolução da pesquisa
 
+- [Proposta inicial apresentada por Emanuelle Pinheiro da Silva](pesquisa/proposta-inicial-emanuelle.md)
 - [Visão científica, problema, hipótese e objetivos](pesquisa/visao-geral.md)
 - [Evolução conceitual do projeto](pesquisa/evolucao-conceitual.md)
 - [Fonte histórica — conversa “Blue Space e Saúde Mental”](fontes/conversa-blue-space-saude-mental.md)
+- [Fonte histórica — artigo apresentado](fontes/artigo-rascunho-39.md)
 
 As formulações científicas são versões preliminares reconstruídas do histórico.
 Elas não devem ser confundidas com protocolo aprovado ou resultado experimental.
