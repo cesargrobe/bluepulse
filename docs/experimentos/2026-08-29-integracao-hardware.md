@@ -87,12 +87,21 @@ IR=926  | A=1.115g | Movimento=0.115 | EM MOVIMENTO | SEM CONTATO
 
 ### Instabilidades observadas
 
-Ocorreram mensagens isoladas de erro na leitura do MPU. A comunicação foi
-restabelecida nas iterações seguintes, sem reinicialização do sistema. A
+O log final preserva 131 linhas de leitura: 40 classificadas como contato, 91
+como sem contato, três como movimento e 128 como parado. Também ocorreram seis
+mensagens de erro na leitura do MPU, incluindo uma sequência de três erros
+consecutivos. A comunicação foi restabelecida nas iterações seguintes, sem
+reinicialização do sistema. A
 hipótese atual é instabilidade elétrica ou mau contato nas conexões provisórias,
 mas isso não foi conclusivamente determinado. Um próximo ensaio deverá usar
 conexões mecanicamente estáveis e poderá incluir tentativas adicionais de
 leitura antes de declarar falha.
+
+## Evidências preservadas
+
+- [log serial integral da integração com OLED](../../dados/brutos/2026-08-29/04-integracao-sensores-oled.txt);
+- [registro fotográfico dos módulos e da bancada](../imagens/2026-08-29/README.md);
+- [firmware integrado](../../firmware/testes/integracao_sensores_oled/integracao_sensores_oled.ino).
 
 ## Conclusão
 
