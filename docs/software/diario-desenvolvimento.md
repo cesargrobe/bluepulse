@@ -89,3 +89,11 @@ foram concluídos.
 - item 3 do plano: iniciado;
 - próximo incremento: estruturar as telas restantes do fluxo antes de adicionar
   dados simulados.
+
+### Avaliação visual pelo orientador
+
+O aplicativo foi aberto pelo Professor Gerson Cesar Grobe de Miranda no
+emulador `Pixel_7a`. A tela inicial, o aviso experimental, a autoria, a
+orientação e a tela de preparação simulada foram visualizados. A navegação de
+ida e volta funcionou, e o orientador confirmou que o incremento estava
+correto. As duas capturas recebidas foram anexadas à evidência datada.

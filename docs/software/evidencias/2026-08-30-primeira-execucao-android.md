@@ -66,9 +66,35 @@ resultou preta por limitação do renderizador nesse modo. A execução não foi
 inferida pela captura: foi confirmada pelo estado da atividade, pela árvore de
 interface do Android e pela navegação efetiva entre as duas telas.
 
+## Validação visual pelo orientador
+
+Após a execução do aplicativo com a janela visível do emulador, o Professor
+Gerson Cesar Grobe de Miranda verificou as duas telas e informou que estava
+“tudo certo”. Foram confirmados:
+
+- tela inicial completa e legível;
+- aviso de uso experimental sem texto cortado;
+- autoria da proposta e orientação apresentadas corretamente;
+- abertura da preparação da sessão pelo botão correspondente;
+- identificação explícita do modo simulado;
+- funcionamento do retorno à tela anterior.
+
+As capturas fornecidas pelo orientador foram preservadas sem edição:
+
+![Tela inicial do BluePulse](imagens/2026-08-30/tela-inicial-bluepulse.png)
+
+![Tela de preparação em modo simulado](imagens/2026-08-30/modo-simulado-bluepulse.png)
+
+Hashes SHA-256 dos arquivos originais:
+
+| Arquivo | SHA-256 |
+| --- | --- |
+| `tela-inicial-bluepulse.png` | `5D61C11250C45BA17E8AC62DAD379F68EB567382A5C99121A578919884506FCA` |
+| `modo-simulado-bluepulse.png` | `D17BA3D2E639E393113191E51EFA6E29D6D004CB5F22282FE562F05936EE7E13` |
+
 ## Decisão
 
 O ambiente Android está apto, o item 2 do plano foi concluído com a exceção
-acima documentada e o item 3 foi iniciado. A próxima validação deverá ocorrer
-com renderização visível em emulador ou aparelho antes de concluir o primeiro
-fluxo navegável.
+acima documentada e o item 3 foi iniciado. A renderização visível deste primeiro
+incremento foi aprovada. Ainda será necessária nova avaliação quando todas as
+telas previstas para o primeiro fluxo navegável estiverem implementadas.

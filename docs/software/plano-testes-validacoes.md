@@ -60,8 +60,9 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   experimental aparece antes da sessão; voltar e cancelar funcionam.
   Verificação: testes de navegação e revisão visual em aparelho Android.
   Estado em 30/08/2026: iniciado com apresentação, aviso experimental e tela de
-  preparação simulada. As demais telas e a revisão visual com renderização
-  gráfica permanecem pendentes.
+  preparação simulada. Esse incremento foi aprovado visualmente pelo orientador
+  no emulador. As demais telas e a revisão visual do fluxo completo permanecem
+  pendentes.
 
 - [ ] **4. Implementar modelos de dados e simulador determinístico**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`
