@@ -21,6 +21,8 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
   _BleStage _stage = _BleStage.ready;
   BluetoothDevice? _device;
   BluePulseBlePacket? _packet;
+  final BluePulseBleSequenceTracker _sequenceTracker =
+      BluePulseBleSequenceTracker();
   String? _message;
   int _nearbyDevices = 0;
   StreamSubscription<List<ScanResult>>? _scanSubscription;
@@ -33,6 +35,7 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
       _device = null;
       _message = null;
       _nearbyDevices = 0;
+      _sequenceTracker.reset();
     });
 
     try {
@@ -130,7 +133,6 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
         _receiveSample,
       );
       await sampleCharacteristic.setNotifyValue(true);
-      _receiveSample(await sampleCharacteristic.read());
       if (mounted) setState(() => _stage = _BleStage.connected);
     } catch (error) {
       await device.disconnect();
@@ -141,6 +143,7 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
   void _receiveSample(List<int> bytes) {
     try {
       final packet = BluePulseBlePacket.parse(bytes);
+      _sequenceTracker.add(packet.sequence);
       if (mounted) setState(() => _packet = packet);
     } on FormatException catch (error) {
       _showError(error.message);
@@ -162,6 +165,7 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
         _stage = _BleStage.ready;
         _device = null;
         _packet = null;
+        _sequenceTracker.reset();
         _message = null;
       });
     }
@@ -208,7 +212,10 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
                       _stage == _BleStage.connecting)
                     const Center(child: CircularProgressIndicator()),
                   if (_stage == _BleStage.connected && _packet != null)
-                    _PacketPanel(packet: _packet!),
+                    _PacketPanel(
+                      packet: _packet!,
+                      stats: _sequenceTracker.snapshot,
+                    ),
                   if (_message != null)
                     Card(
                       color: const Color(0xFFFEE2E2),
@@ -284,9 +291,10 @@ class _BleMonitoringScreenState extends State<BleMonitoringScreen> {
 }
 
 class _PacketPanel extends StatelessWidget {
-  const _PacketPanel({required this.packet});
+  const _PacketPanel({required this.packet, required this.stats});
 
   final BluePulseBlePacket packet;
+  final BluePulseBleTransmissionStats stats;
 
   @override
   Widget build(BuildContext context) {
@@ -324,6 +332,24 @@ class _PacketPanel extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             const Text('BPM / SpO₂ / GSR: não disponíveis'),
+            const Divider(height: 28),
+            Text(
+              'Integridade desta conexão',
+              style: Theme.of(context).textTheme.titleMedium
+                  ?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 6),
+            Text('Pacotes recebidos: ${stats.received}'),
+            Text('Lacunas de sequência: ${stats.missing}'),
+            Text('Pacotes duplicados: ${stats.duplicates}'),
+            Text('Fora de ordem: ${stats.outOfOrder}'),
+            Text(
+              'Entrega observada: ${stats.deliveryPercentage.toStringAsFixed(2)}%',
+            ),
+            const SizedBox(height: 6),
+            const Text(
+              'Contagem técnica local; não representa validação clínica.',
+            ),
           ],
         ),
       ),

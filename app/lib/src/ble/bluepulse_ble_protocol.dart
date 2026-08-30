@@ -3,6 +3,84 @@ import 'dart:typed_data';
 const bluePulseDeviceName = 'BluePulse-ESP32';
 const bluePulseServiceUuid = '7d2a0001-8f5b-4c2d-a9e1-3b6f5c7d9000';
 const bluePulseSampleUuid = '7d2a0002-8f5b-4c2d-a9e1-3b6f5c7d9000';
+const _uint32Modulus = 0x100000000;
+const _uint32HalfRange = 0x80000000;
+
+class BluePulseBleTransmissionStats {
+  const BluePulseBleTransmissionStats({
+    required this.received,
+    required this.missing,
+    required this.duplicates,
+    required this.outOfOrder,
+    required this.firstSequence,
+    required this.lastSequence,
+  });
+
+  final int received;
+  final int missing;
+  final int duplicates;
+  final int outOfOrder;
+  final int? firstSequence;
+  final int? lastSequence;
+
+  int get sequentialReceived => received - duplicates - outOfOrder;
+
+  double get deliveryPercentage {
+    final expected = sequentialReceived + missing;
+    return expected == 0 ? 0 : sequentialReceived * 100 / expected;
+  }
+}
+
+class BluePulseBleSequenceTracker {
+  int _received = 0;
+  int _missing = 0;
+  int _duplicates = 0;
+  int _outOfOrder = 0;
+  int? _firstSequence;
+  int? _lastSequence;
+
+  void add(int sequence) {
+    if (sequence < 0 || sequence >= _uint32Modulus) {
+      throw RangeError.range(sequence, 0, _uint32Modulus - 1, 'sequence');
+    }
+
+    _received++;
+    final last = _lastSequence;
+    if (last == null) {
+      _firstSequence = sequence;
+      _lastSequence = sequence;
+      return;
+    }
+
+    final forwardDistance = (sequence - last) % _uint32Modulus;
+    if (forwardDistance == 0) {
+      _duplicates++;
+    } else if (forwardDistance < _uint32HalfRange) {
+      _missing += forwardDistance - 1;
+      _lastSequence = sequence;
+    } else {
+      _outOfOrder++;
+    }
+  }
+
+  BluePulseBleTransmissionStats get snapshot => BluePulseBleTransmissionStats(
+    received: _received,
+    missing: _missing,
+    duplicates: _duplicates,
+    outOfOrder: _outOfOrder,
+    firstSequence: _firstSequence,
+    lastSequence: _lastSequence,
+  );
+
+  void reset() {
+    _received = 0;
+    _missing = 0;
+    _duplicates = 0;
+    _outOfOrder = 0;
+    _firstSequence = null;
+    _lastSequence = null;
+  }
+}
 
 class BluePulseBlePacket {
   const BluePulseBlePacket({

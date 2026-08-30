@@ -138,8 +138,10 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   recepção de notificações reais aprovadas no tablet. A captura foi preservada.
   A desconexão comandada pelo aplicativo, a nova localização, a reconexão e a
   retomada da sequência crescente de notificações também foram aprovadas.
-  Permanecem pendentes perda de pacotes, comparação simultânea com a serial,
-  exportação e repetição controlada dos estados.
+  A instrumentação de perda, duplicação, ordem e percentual de entrega foi
+  implementada e aprovada em testes automatizados; o ensaio real de 60 segundos
+  ainda precisa ser executado. Permanecem pendentes a comparação simultânea com
+  a serial, exportação e repetição controlada dos estados.
 
 - [ ] **10. Validar qualidade de sinal e BPM antes de exibi-lo**
   Referência: `especificacao-mvp.md > Regras de segurança e linguagem`

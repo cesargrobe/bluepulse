@@ -17,6 +17,8 @@ manter o modo simulado para testes reproduzíveis.
 - pausa oceânica visual opcional de 30 segundos, sem áudio nesta versão;
 - conexão BLE experimental pelo protocolo BluePulse v1;
 - recepção de IR bruto, movimento, validade do MPU e sequência;
+- contagem local de pacotes, lacunas de sequência, duplicações, ordem e
+  percentual observado de entrega por conexão;
 - respostas mantidas somente na memória durante este incremento;
 - BPM, SpO₂, GSR, áudio e armazenamento ainda não implementados.
 
@@ -30,7 +32,8 @@ flutter test
 flutter build apk --debug
 ```
 
-O histórico dos testes e as versões das ferramentas estão na
+O conjunto atual possui 17 testes automatizados. O histórico dos testes e as
+versões das ferramentas estão na
 [evidência da primeira execução Android](../docs/software/evidencias/2026-08-30-primeira-execucao-android.md).
 
 ## Limite de uso

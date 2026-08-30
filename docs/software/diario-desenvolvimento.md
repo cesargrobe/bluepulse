@@ -213,3 +213,18 @@ o número de sequência continuou aumentando. Assim, conexão, desconexão
 controlada, reconexão e retomada das notificações BLE foram aprovadas. A
 comparação simultânea com a serial e a medição de perda, duplicação ou atraso de
 pacotes permanecem abertas.
+
+### Instrumentação para integridade da transmissão
+
+O aplicativo passou a acompanhar cada conexão sem armazenar as amostras. A
+instrumentação conta pacotes recebidos, lacunas na sequência, duplicações,
+pacotes fora de ordem e percentual observado de entrega. A contagem considera
+inclusive a passagem circular do contador de 32 bits e é reiniciada ao começar
+uma nova busca.
+
+A leitura explícita da característica logo após ativar as notificações foi
+removida para não produzir artificialmente uma duplicação inicial. A análise
+estática não encontrou ocorrências e 17 testes automatizados foram aprovados,
+incluindo sequência contínua, lacuna, duplicação, pacote fora de ordem e retorno
+do contador após `0xFFFFFFFF`. A instalação e o ensaio de 60 segundos no tablet
+permanecem como portão manual antes de registrar taxas observadas.
