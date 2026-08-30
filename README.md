@@ -38,8 +38,11 @@ precisam de calibração, repetição dos testes e validação em condições va
 ## Documentação e firmware
 
 - [Índice completo da documentação](docs/README.md)
+- [Visão científica, problema, hipótese e objetivos](docs/pesquisa/visao-geral.md)
+- [Evolução conceitual do projeto](docs/pesquisa/evolucao-conceitual.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)
+- [Registro fotográfico de 29/08/2026](docs/imagens/2026-08-29/README.md)
 - [Firmware de integração dos sensores e OLED](firmware/testes/integracao_sensores_oled/integracao_sensores_oled.ino)
 - [Dados brutos preservados](dados/brutos/2026-08-29/README.md)
 
@@ -49,7 +52,10 @@ precisam de calibração, repetição dos testes e validação em condições va
 - usar o sinal de movimento como indicador de qualidade da medição;
 - melhorar a tolerância a falhas transitórias de leitura do módulo inercial;
 - calibrar os limiares com um protocolo de testes reproduzível;
-- evoluir a interface do OLED para apresentar informações úteis ao usuário.
+- evoluir a interface do OLED para apresentar informações úteis ao usuário;
+- revisar e aprovar formalmente o problema, a hipótese, os objetivos e o
+  protocolo ético antes de estudos com participantes;
+- desenvolver e testar o aplicativo inicialmente com dados simulados.
 
 ## Licença
 

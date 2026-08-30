@@ -6,6 +6,15 @@ incertezas e mudanças de decisão.
 
 ## Registros disponíveis
 
+### Fundamentação e evolução da pesquisa
+
+- [Visão científica, problema, hipótese e objetivos](pesquisa/visao-geral.md)
+- [Evolução conceitual do projeto](pesquisa/evolucao-conceitual.md)
+- [Fonte histórica — conversa “Blue Space e Saúde Mental”](fontes/conversa-blue-space-saude-mental.md)
+
+As formulações científicas são versões preliminares reconstruídas do histórico.
+Elas não devem ser confundidas com protocolo aprovado ou resultado experimental.
+
 ### Arquitetura
 
 - [Arquitetura de hardware validada](hardware/README.md)
@@ -24,9 +33,15 @@ integrada.
 
 - [Protocolo para documentação de ensaios](metodologia/registro-de-ensaios.md)
 
+### Software e aquisição
+
+- [Requisitos iniciais do aplicativo](software/requisitos-iniciais.md)
+- [Histórico inicial de aquisição](aquisicao/historico-inicial.md)
+
 ### Dados
 
 - [Manifesto dos dados brutos de 29/08/2026](../dados/brutos/2026-08-29/README.md)
+- [Registro fotográfico de 29/08/2026](imagens/2026-08-29/README.md)
 
 ### Firmware experimental
 
