@@ -7,8 +7,7 @@
 - commit do aplicativo verificado: `fcea779`;
 - plataforma: Flutter/Android;
 - dispositivo de instalação: tablet Samsung SM-X810;
-- estado: verificação automática concluída; avaliação visual do orientador
-  pendente.
+- estado: verificação automática e avaliação visual do orientador concluídas.
 
 ## Finalidade
 
@@ -73,6 +72,7 @@ armazenamento futuro.
 | compilação Android de depuração | sucesso |
 | atualização no tablet SM-X810 | sucesso |
 | abertura da atividade principal | sucesso |
+| avaliação visual e funcional pelo orientador | aprovada |
 
 Os testes cobrem:
 
@@ -85,13 +85,31 @@ Os testes cobrem:
 7. aviso de armazenamento somente em memória e ausência de avaliação clínica;
 8. cancelamento e retorno à apresentação.
 
+## Avaliação pelo orientador
+
+O Professor Gerson Cesar Grobe de Miranda percorreu o novo fluxo no tablet e
+confirmou que estava tudo certo. Foram considerados aprovados neste incremento:
+
+- apresentação da tela de código anônimo;
+- validação e confirmação de privacidade;
+- avanço para o autorrelato inicial;
+- seleção das três escalas;
+- habilitação do botão somente após o preenchimento;
+- aviso final de armazenamento apenas em memória e ausência de avaliação
+  clínica;
+- legibilidade e funcionamento geral no dispositivo físico.
+
+Não foram preservados o código digitado nem as respostas escolhidas durante a
+avaliação, pois esses valores não são necessários como evidência e poderiam
+representar dados indevidos no repositório.
+
 ## Limitações e próximo portão
 
 - os valores ainda não são persistidos nem exportados;
 - as perguntas e os rótulos dependem de revisão metodológica;
 - não existe seleção entre modo simulado e BLE neste incremento;
 - não houve análise de dados nem comparação pré/pós;
-- a interface ainda precisa ser aprovada visualmente no tablet pelo orientador.
+- o fluxo completo ainda depende das telas posteriores e de nova avaliação.
 
-Após a aprovação visual, o próximo incremento poderá criar a seleção da fonte
-de dados e o primeiro monitoramento simulado, mantendo BPM, SpO₂ e GSR nulos.
+O próximo incremento poderá criar a seleção da fonte de dados e o primeiro
+monitoramento simulado, mantendo BPM, SpO₂ e GSR nulos.

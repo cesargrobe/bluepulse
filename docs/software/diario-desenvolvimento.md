@@ -134,3 +134,10 @@ APK foi recompilado e instalado no tablet Samsung SM-X810.
 
 O commit verificado é `fcea779`. A avaliação visual dessas novas telas pelo
 orientador permanece como próximo portão antes do avanço.
+
+### Aprovação visual do incremento
+
+O Professor Gerson percorreu no tablet o código anônimo, a confirmação de
+privacidade, as três escalas do autorrelato e o aviso de conclusão. O
+funcionamento e a legibilidade foram aprovados. Código e respostas usados no
+teste não foram registrados, respeitando a minimização de dados.

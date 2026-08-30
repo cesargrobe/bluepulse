@@ -62,9 +62,9 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   Estado em 30/08/2026: iniciado com apresentação, aviso experimental e tela de
   preparação simulada. Esse incremento foi aprovado visualmente pelo orientador
   no emulador e em um tablet físico Samsung SM-X810. Código anônimo e
-  autorrelato inicial foram implementados e aprovados nos testes automatizados;
-  sua avaliação visual permanece pendente. As demais telas e a revisão visual
-  do fluxo completo continuam abertas.
+  autorrelato inicial foram aprovados nos testes automatizados e na avaliação
+  visual do orientador no tablet. As demais telas e a revisão visual do fluxo
+  completo continuam abertas.
 
 - [ ] **4. Implementar modelos de dados e simulador determinístico**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`
