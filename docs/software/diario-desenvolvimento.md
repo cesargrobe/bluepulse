@@ -106,3 +106,16 @@ foi instalado e aberto diretamente no aparelho. O dispositivo executava Android
 confirmou o funcionamento e autorizou o uso do tablet nas próximas etapas,
 inclusive para a futura integração BLE. O identificador único do aparelho não
 foi incluído no repositório.
+
+## 30/08/2026 — registro da proposta visual
+
+Duas telas conceituais com ambientação oceânica foram incorporadas ao histórico
+para discussão com Emanuelle. A análise preserva a paleta, a atmosfera, os
+cartões e a organização como referências, mas rejeita para o MVP login nominal,
+classificação automática de estresse, humor inferido, BPM ainda não validado e
+assistente de IA.
+
+Os arquivos recebidos foram preservados com hashes. Permanecem pendentes a
+confirmação de autoria, origem, licenças, arquivos de fundo sem interface e a
+decisão sobre o uso do nome “Oceannara”. O registro está em
+`design/proposta-visual-2026-08-30.md`.

@@ -61,6 +61,7 @@ execução em emulador Android.
 - [Plano passo a passo de testes e validações](docs/software/plano-testes-validacoes.md)
 - [Código do aplicativo Flutter](app/README.md)
 - [Evidência da primeira execução Android](docs/software/evidencias/2026-08-30-primeira-execucao-android.md)
+- [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)
 - [Registro fotográfico de 29/08/2026](docs/imagens/2026-08-29/README.md)

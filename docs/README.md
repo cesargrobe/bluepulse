@@ -43,6 +43,7 @@ integrada.
 - [Ambiente de desenvolvimento do aplicativo](software/ambiente-desenvolvimento.md)
 - [Diário de desenvolvimento do aplicativo](software/diario-desenvolvimento.md)
 - [Evidência da primeira execução Android](software/evidencias/2026-08-30-primeira-execucao-android.md)
+- [Proposta visual e análise de design](software/design/proposta-visual-2026-08-30.md)
 - [Decisão 0002 — Flutter com Android primeiro](decisoes/0002-flutter-android-primeiro.md)
 - [Histórico inicial de aquisição](aquisicao/historico-inicial.md)
 
