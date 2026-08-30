@@ -95,8 +95,15 @@ void iniciarBLE() {
   servico->start();
 
   BLEAdvertising *anuncio = BLEDevice::getAdvertising();
-  anuncio->addServiceUUID(BLE_SERVICE_UUID);
-  anuncio->setScanResponse(true);
+  BLEAdvertisementData dadosAnuncio;
+  dadosAnuncio.setFlags(0x06);
+  dadosAnuncio.setName(BLE_DEVICE_NAME);
+
+  BLEAdvertisementData dadosResposta;
+  dadosResposta.setCompleteServices(BLEUUID(BLE_SERVICE_UUID));
+
+  anuncio->setAdvertisementData(dadosAnuncio);
+  anuncio->setScanResponseData(dadosResposta);
   BLEDevice::startAdvertising();
 }
 
