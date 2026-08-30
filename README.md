@@ -47,9 +47,9 @@ Os critérios `IR > 5000` para contato e `movimento >= 0.08` para movimento são
 precisam de calibração, repetição dos testes e validação em condições variadas.
 
 O primeiro aplicativo Android já foi criado em Flutter. Ele apresenta o aviso
-de uso experimental e permite entrar em uma preparação de sessão simulada. O
-incremento passou por análise estática, testes automatizados, compilação e
-execução em emulador Android.
+de uso experimental, solicita um código anônimo e oferece um autorrelato inicial
+provisório. Os dados ainda permanecem somente na memória. Os incrementos passam
+por análise estática, testes automatizados, compilação e execução Android.
 
 ## Documentação e firmware
 
@@ -61,6 +61,7 @@ execução em emulador Android.
 - [Plano passo a passo de testes e validações](docs/software/plano-testes-validacoes.md)
 - [Código do aplicativo Flutter](app/README.md)
 - [Evidência da primeira execução Android](docs/software/evidencias/2026-08-30-primeira-execucao-android.md)
+- [Evidência do código anônimo e autorrelato inicial](docs/software/evidencias/2026-08-30-codigo-anonimo-autorrelato.md)
 - [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)

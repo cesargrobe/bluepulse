@@ -119,3 +119,18 @@ Os arquivos recebidos foram preservados com hashes. Permanecem pendentes a
 confirmação de autoria, origem, licenças, arquivos de fundo sem interface e a
 decisão sobre o uso do nome “Oceannara”. O registro está em
 `design/proposta-visual-2026-08-30.md`.
+
+## 30/08/2026 — código anônimo e autorrelato inicial
+
+O aplicativo foi reorganizado em arquivos menores e recebeu as duas etapas
+seguintes do fluxo. O código da sessão limita formato e tamanho, alerta contra
+dados pessoais e exige confirmação de privacidade. Em seguida, o autorrelato
+inicial apresenta escalas provisórias de tensão, tranquilidade e conforto.
+
+As respostas permanecem somente na memória e não recebem interpretação. O
+aplicativo declara que elas não representam avaliação clínica. Quatro testes
+automatizados foram aprovados, a análise estática não encontrou problemas e o
+APK foi recompilado e instalado no tablet Samsung SM-X810.
+
+O commit verificado é `fcea779`. A avaliação visual dessas novas telas pelo
+orientador permanece como próximo portão antes do avanço.

@@ -8,7 +8,10 @@ recebe dados reais do protótipo.
 
 - apresentação do projeto, autoria e orientação;
 - aviso explícito de uso experimental e ausência de diagnóstico clínico;
-- entrada em uma preparação de sessão simulada;
+- identificação por código anônimo, sem dados pessoais;
+- confirmação de privacidade antes de avançar;
+- autorrelato inicial provisório de tensão, tranquilidade e conforto;
+- respostas mantidas somente na memória durante este incremento;
 - dados fisiológicos reais, armazenamento e BLE ainda não implementados.
 
 ## Verificação
