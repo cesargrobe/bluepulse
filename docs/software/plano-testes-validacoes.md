@@ -38,7 +38,7 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   Verificação: revisão cruzada com requisitos iniciais, visão científica e
   decisão 0002.
 
-- [ ] **2. Preparar e validar o ambiente Flutter/Android**
+- [x] **2. Preparar e validar o ambiente Flutter/Android**
   Referência: `especificacao-mvp.md > Estado`
   O que construir: instalar Flutter estável, Android SDK, JDK compatível e
   configurar um aparelho ou emulador.
@@ -46,6 +46,11 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   aplicativo padrão executando no dispositivo escolhido.
   Verificação: registrar versões; executar diagnóstico do ambiente, análise
   estática e teste padrão; guardar a saída em arquivo datado.
+  Resultado em 30/08/2026: concluído com compilação, instalação e execução no
+  emulador `Pixel_7a`. O estado das licenças aparece como desconhecido devido à
+  incompatibilidade entre o Flutter 3.47.2 e a nova Android CLI; a exceção e as
+  evidências estão registradas em
+  `evidencias/2026-08-30-primeira-execucao-android.md`.
 
 - [ ] **3. Criar a estrutura do aplicativo e o primeiro fluxo navegável**
   Referência: `especificacao-mvp.md > Telas obrigatórias`
@@ -54,6 +59,9 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   Aceitação: o usuário percorre o fluxo de início ao fim sem travamento; aviso
   experimental aparece antes da sessão; voltar e cancelar funcionam.
   Verificação: testes de navegação e revisão visual em aparelho Android.
+  Estado em 30/08/2026: iniciado com apresentação, aviso experimental e tela de
+  preparação simulada. As demais telas e a revisão visual com renderização
+  gráfica permanecem pendentes.
 
 - [ ] **4. Implementar modelos de dados e simulador determinístico**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`

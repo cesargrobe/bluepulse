@@ -44,20 +44,34 @@ estava conectado durante a verificação.
 - SHA-256 verificado:
   `37934F2128A55D77A38BABA12FD611157ED23A47BF7D2B7D17E9E84DA118409D`;
 - instalação usada pelo Codex:
-  `C:\Users\cesar\Documents\Codex\tools\flutter`.
+  `C:\Users\cesar\Documents\Codex\tools\flutter-3.47.2-clean\flutter`.
 
 O cache e os arquivos de configuração usados na automação foram isolados em
 `C:\Users\cesar\Documents\Codex\tools`, sem substituir o Java padrão do
 Windows e sem alterar globalmente a lista de diretórios confiáveis do Git.
 
-## Pendências encontradas pelo diagnóstico
+### Componentes Android concluídos
 
-- `Android SDK Command-line Tools (latest)` não está instalado corretamente;
-- as licenças Android ainda precisam ser lidas e aceitas pelo responsável;
-- não há aparelho ou emulador conectado;
+- Android SDK Command-line Tools `23.0.0` instalado;
+- NDK `28.2.13676358` instalado com a nova ferramenta `android sdk`;
+- emulador `Pixel_7a`, Android 16/API 36, detectado e iniciado;
+- aplicativo instalado e executado como atividade principal;
+- Android Debug APK compilado com sucesso.
+
+O Flutter 3.47.2 ainda informa `Android license status unknown`. A versão 23
+das Command-line Tools declara que `sdkmanager --licenses` não é mais
+necessário e transfere o gerenciamento para a nova ferramenta Android. Essa
+incompatibilidade de diagnóstico foi documentada como exceção não bloqueante:
+as licenças estão presentes no SDK, os componentes foram baixados pela
+ferramenta oficial e a compilação, instalação e execução Android foram
+concluídas.
+
+## Pendências não bloqueantes
+
 - Flutter e Dart ainda não foram adicionados ao `PATH` global;
-- o diagnóstico de Windows desktop é irrelevante para o MVP Android e não será
-  tratado como bloqueio.
+- o diagnóstico de licença acima permanece como limitação de compatibilidade;
+- Visual Studio não está instalado, mas o suporte a Windows desktop está fora
+  do escopo do MVP Android.
 
 ## Critério para concluir a preparação
 
@@ -69,5 +83,5 @@ Windows e sem alterar globalmente a lista de diretórios confiáveis do Git.
 - projeto padrão compilado, testado e executado;
 - versões e saída da verificação preservadas em registro datado.
 
-Até que as pendências Android sejam resolvidas, o item 2 do
-[plano de testes e validações](plano-testes-validacoes.md) permanece aberto.
+O ambiente atende ao desenvolvimento Android. Os detalhes da compilação e da
+execução estão na [evidência da primeira execução](evidencias/2026-08-30-primeira-execucao-android.md).

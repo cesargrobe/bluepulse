@@ -42,6 +42,7 @@ integrada.
 - [Plano passo a passo de testes e validações](software/plano-testes-validacoes.md)
 - [Ambiente de desenvolvimento do aplicativo](software/ambiente-desenvolvimento.md)
 - [Diário de desenvolvimento do aplicativo](software/diario-desenvolvimento.md)
+- [Evidência da primeira execução Android](software/evidencias/2026-08-30-primeira-execucao-android.md)
 - [Decisão 0002 — Flutter com Android primeiro](decisoes/0002-flutter-android-primeiro.md)
 - [Histórico inicial de aquisição](aquisicao/historico-inicial.md)
 

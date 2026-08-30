@@ -46,6 +46,11 @@ Os critérios `IR > 5000` para contato e `movimento >= 0.08` para movimento são
 **limiares provisórios**, definidos apenas para os ensaios iniciais. Eles ainda
 precisam de calibração, repetição dos testes e validação em condições variadas.
 
+O primeiro aplicativo Android já foi criado em Flutter. Ele apresenta o aviso
+de uso experimental e permite entrar em uma preparação de sessão simulada. O
+incremento passou por análise estática, testes automatizados, compilação e
+execução em emulador Android.
+
 ## Documentação e firmware
 
 - [Índice completo da documentação](docs/README.md)
@@ -54,6 +59,8 @@ precisam de calibração, repetição dos testes e validação em condições va
 - [Evolução conceitual do projeto](docs/pesquisa/evolucao-conceitual.md)
 - [Especificação do MVP do aplicativo](docs/software/especificacao-mvp.md)
 - [Plano passo a passo de testes e validações](docs/software/plano-testes-validacoes.md)
+- [Código do aplicativo Flutter](app/README.md)
+- [Evidência da primeira execução Android](docs/software/evidencias/2026-08-30-primeira-execucao-android.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
 - [Experimento de integração de 29/08/2026](docs/experimentos/2026-08-29-integracao-hardware.md)
 - [Registro fotográfico de 29/08/2026](docs/imagens/2026-08-29/README.md)
@@ -62,7 +69,7 @@ precisam de calibração, repetição dos testes e validação em condições va
 
 ## Próximas etapas
 
-- preparar o ambiente Flutter/Android e criar o primeiro fluxo navegável;
+- completar as telas do primeiro fluxo navegável do aplicativo;
 - integrar a estimativa de frequência cardíaca (BPM) somente após validação
   específica;
 - usar o sinal de movimento como indicador de qualidade da medição;
