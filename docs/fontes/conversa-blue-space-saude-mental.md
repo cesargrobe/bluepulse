@@ -37,8 +37,9 @@ Documentos derivados:
 
 ## Limitações da recuperação
 
-- a planilha de aquisição mencionada na conversa não estava disponível como
-  anexo recuperável;
+- a planilha de aquisição não estava disponível entre os anexos recuperados da
+  conversa, mas foi posteriormente fornecida pelo pesquisador e incorporada ao
+  [histórico de aquisição](../aquisicao/historico-inicial.md);
 - horários individuais dos testes não foram registrados;
 - ideias e exemplos apresentados durante o planejamento não equivalem a
   decisões metodológicas aprovadas;
