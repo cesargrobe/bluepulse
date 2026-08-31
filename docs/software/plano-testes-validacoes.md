@@ -105,7 +105,7 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   aprovou o fluxo visual no tablet. Áudio, duração configurável e registro de
   início/fim continuam pendentes.
 
-- [ ] **7. Implementar armazenamento local e exportação auditável**
+- [x] **7. Implementar armazenamento local e exportação auditável**
   Referência: `especificacao-mvp.md > Dados mínimos da sessão`
   O que construir: persistência local, histórico, exclusão controlada e
   exportação estruturada de metadados, autorrelatos e amostras.
@@ -130,9 +130,11 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   salvamento posterior. A tela de histórico simulada foi implementada com
   releitura, reexportação e exclusão confirmada. A recriação da tela foi
   aprovada em teste; no tablet, o arquivo `BP-002` permaneceu na pasta privada
-  após atualização, encerramento forçado e nova abertura. Permanecem pendentes
-  a confirmação visual de `BP-002` na tela e a política para qualquer
-  persistência de dados reais.
+  após atualização, encerramento forçado e nova abertura. O orientador confirmou
+  visualmente `BP-002` no histórico, com duração de 30,003 segundos e 30
+  amostras. A etapa fica concluída para dados simulados. Qualquer persistência
+  de dados reais permanece proibida até definição de política própria e revisão
+  ética.
 
 - [ ] **8. Definir e testar o protocolo BLE sem depender do sensor**
   Referência: `especificacao-mvp.md > Arquitetura lógica`

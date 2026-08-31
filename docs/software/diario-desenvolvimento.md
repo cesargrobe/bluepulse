@@ -337,3 +337,11 @@ encontrou ocorrências. O APK, com 180.104.326 bytes e SHA-256
 foi instalado no Samsung SM-X810 preservando dados. Após encerramento forçado e
 nova abertura, a inspeção técnica confirmou que `BP-002` permanecia na pasta
 privada. Falta confirmar visualmente sua apresentação na nova tela.
+
+### Confirmação visual do histórico
+
+O orientador abriu a nova tela e confirmou que `BP-002` reapareceu com início
+UTC, duração de 30,003 segundos, 30 amostras e métricas fisiológicas
+indisponíveis. A captura foi incorporada ao repositório com SHA-256. O portão de
+persistência, exportação, exclusão e recuperação após reinicialização está
+concluído para dados simulados. Essa conclusão não se estende a dados reais.

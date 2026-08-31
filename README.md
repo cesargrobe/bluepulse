@@ -92,8 +92,8 @@ execução Android.
 - evoluir a interface do OLED para apresentar informações úteis ao usuário;
 - revisar e aprovar formalmente o problema, a hipótese, os objetivos e o
   protocolo ético antes de estudos com participantes;
-- confirmar visualmente no tablet que a coleta `BP-002` reaparece no novo
-  histórico após fechar e reabrir o aplicativo;
+- avançar na validação do protocolo BLE, incluindo reconexão e mensagens
+  incompletas, sem persistir amostras reais;
 - definir uma política formal antes de persistir qualquer dado fisiológico real.
 
 ## Licença

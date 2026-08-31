@@ -52,6 +52,7 @@ clínica.
 | testes automatizados | 24 aprovados |
 | compilação Android de depuração | aprovada |
 | instalação preservando dados do aplicativo | aprovada |
+| recuperação visual de `BP-002` após reabertura | aprovada pelo orientador |
 
 O APK possui 180.104.326 bytes e SHA-256
 `FCCB1BDCB8CBF6090CC975AB8B2DF147E336F8515C8EA2CEBEA240F193EC5647`.
@@ -65,5 +66,21 @@ reinicialização confirmou que o JSON `BP-002` permanecia em
 `app_flutter/bluepulse_sessions`.
 
 Essa inspeção comprova a permanência do arquivo no armazenamento do aplicativo.
-O portão seguinte é a confirmação visual, pelo orientador, de que `BP-002`
-aparece na nova tela de histórico após desbloquear o tablet.
+
+## Confirmação visual pelo orientador
+
+Após desbloquear o tablet e abrir o histórico, o orientador confirmou a
+apresentação da coleta `BP-002` com início em `31/08/2026 02:00:37 UTC`, duração
+de `30.003 s`, 30 amostras simuladas e BPM, SpO₂ e GSR indisponíveis. A tela
+também apresentou as ações de exportação e exclusão e manteve explícito que
+nenhuma amostra BLE real é armazenada.
+
+![Histórico com BP-002 após reabertura](imagens/2026-08-31/historico-bp-002-apos-reabertura.jpg)
+
+| Artefato | Tamanho | SHA-256 |
+| --- | ---: | --- |
+| `historico-bp-002-apos-reabertura.jpg` | 332.966 bytes | `4370D58DF9D159E415F768A9D1E9C73F1C7E1E95CEF4DFBE94AD66FD26332970` |
+
+Com essa confirmação, o portão de persistência e recuperação de coletas
+simuladas após reinicialização está concluído. Isso não autoriza armazenamento
+de dados fisiológicos reais, que depende de política própria e revisão ética.
