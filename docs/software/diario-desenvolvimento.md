@@ -226,5 +226,13 @@ A leitura explícita da característica logo após ativar as notificações foi
 removida para não produzir artificialmente uma duplicação inicial. A análise
 estática não encontrou ocorrências e 17 testes automatizados foram aprovados,
 incluindo sequência contínua, lacuna, duplicação, pacote fora de ordem e retorno
-do contador após `0xFFFFFFFF`. A instalação e o ensaio de 60 segundos no tablet
-permanecem como portão manual antes de registrar taxas observadas.
+do contador após `0xFFFFFFFF`. A instalação e o ensaio no tablet foram definidos
+como portão manual antes de registrar taxas observadas.
+
+O portão manual foi concluído no tablet Samsung SM-X810. A captura registrou
+396 pacotes recebidos, sem lacunas de sequência, duplicações ou pacotes fora de
+ordem, correspondendo a entrega observada de 100,00% nessa conexão. Na
+frequência nominal de 200 ms, a contagem equivale a aproximadamente 79,2
+segundos, sem substituir uma medição independente de tempo. O resultado vale
+somente para esse intervalo e condições de ensaio. A mesma tela preservou BPM,
+SpO₂ e GSR como indisponíveis e exibiu o limite de não diagnóstico clínico.

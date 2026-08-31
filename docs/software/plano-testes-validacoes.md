@@ -139,9 +139,11 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   A desconexão comandada pelo aplicativo, a nova localização, a reconexão e a
   retomada da sequência crescente de notificações também foram aprovadas.
   A instrumentação de perda, duplicação, ordem e percentual de entrega foi
-  implementada e aprovada em testes automatizados; o ensaio real de 60 segundos
-  ainda precisa ser executado. Permanecem pendentes a comparação simultânea com
-  a serial, exportação e repetição controlada dos estados.
+  implementada e aprovada em testes automatizados. O primeiro ensaio real
+  registrou 396 pacotes, 0 lacunas, 0 duplicações, 0 fora de ordem e entrega
+  observada de 100,00% nessa conexão. Permanecem pendentes a comparação
+  simultânea com a serial, a medição de atraso com referência independente,
+  exportação e repetição controlada dos estados e das condições de comunicação.
 
 - [ ] **10. Validar qualidade de sinal e BPM antes de exibi-lo**
   Referência: `especificacao-mvp.md > Regras de segurança e linguagem`

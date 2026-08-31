@@ -66,6 +66,35 @@ representam diagnóstico ou validação clínica.
 | --- | ---: | --- |
 | `conexao-ble-real-bluepulse.jpg` | 447.361 bytes | `4F866B2DC5EA0ECDA5D1F109063EDCD3F13CA6AB591615C2BFBBF15A7AA5B133` |
 
+## Ensaio de integridade da transmissão
+
+Após a inclusão do contador técnico no aplicativo, foi realizada nova conexão
+com o mesmo protótipo e tablet. A captura fornecida pelo orientador registra:
+
+- sequência atual `3535`;
+- IR bruto `5288`;
+- índice de movimento `0.035`;
+- MPU65xx com leitura válida;
+- estado **Contato provisório detectado**;
+- `396` pacotes recebidos;
+- `0` lacunas de sequência;
+- `0` pacotes duplicados;
+- `0` pacotes fora de ordem;
+- entrega observada de `100,00%` nessa conexão.
+
+Na frequência nominal de uma notificação a cada 200 ms, 396 pacotes equivalem
+a aproximadamente 79,2 segundos de transmissão. Esse tempo é uma estimativa
+derivada da frequência configurada, não uma medição independente de relógio.
+O resultado demonstra integridade completa somente no intervalo e nas condições
+desse ensaio; não autoriza generalização para outras distâncias, interferências
+ou durações.
+
+![Integridade da transmissão BLE após 396 pacotes](imagens/2026-08-30/integridade-ble-396-pacotes.jpg)
+
+| Arquivo | Tamanho | SHA-256 |
+| --- | ---: | --- |
+| `integridade-ble-396-pacotes.jpg` | 550.021 bytes | `2BFCA09612D1A807DA4420793698ACB3D591989CD602D1438905B73AC907132A` |
+
 ## Verificações técnicas anteriores ao ensaio
 
 | Verificação | Resultado |
@@ -81,6 +110,7 @@ representam diagnóstico ou validação clínica.
 | desconexão comandada pelo aplicativo | aprovada no tablet |
 | nova localização e reconexão | aprovadas no tablet |
 | retomada da sequência de notificações | aprovada; sequência crescente observada |
+| integridade em uma conexão de 396 pacotes | aprovada; 0 lacunas, 0 duplicações e 0 fora de ordem |
 
 ## Limites e próximos testes
 
@@ -88,7 +118,8 @@ Esta evidência valida a primeira conexão, a recepção, a desconexão controla
 a reconexão com retomada das notificações. Ainda permanecem pendentes:
 
 - comparação simultânea entre sequência/valores no monitor serial e no tablet;
-- registro de perda, duplicação ou atraso de pacotes;
+- repetição da medição de perda, duplicação e ordem em outras condições;
+- medição específica de atraso com referência temporal independente;
 - repetição controlada dos estados sem contato, contato e movimento;
 - validação específica de qualidade de sinal antes de qualquer BPM.
 
