@@ -95,6 +95,8 @@ foram preservados sem alteração neste repositório.
 | [`BP-001_2026-08-31T01-25-04.370770Z.json`](dados/2026-08-30/BP-001_2026-08-31T01-25-04.370770Z.json) | 10.658 bytes | `B6BD382055CE02FBE553E53751C133F7BCB511A5B8B44F5E649287396D0EA44D` |
 | `persistencia-exportacao-simulada-tablet.jpg` | 467.008 bytes | `4466C4F5FC8B3C3A8114FE51D2A572C715E2A2922A9D5630306678E500C0BECE` |
 | `exclusao-coleta-simulada-tablet.jpg` | 458.416 bytes | `192554EDB1E46BA1DB238A280432A4E1D1C99D80ED55F9672E1E55D38205C379` |
+| [`BP-002_2026-08-31T02-00-37.608605Z.csv`](dados/2026-08-30/BP-002_2026-08-31T02-00-37.608605Z.csv) | 2.878 bytes | `0EA2730700AAE747016BC7B696161A87FB69C6D150938CD34BF76B2BA45F7F5E` |
+| [`BP-002_2026-08-31T02-00-37.608605Z.json`](dados/2026-08-30/BP-002_2026-08-31T02-00-37.608605Z.json) | 10.658 bytes | `83FC7EE32D36103936B73FE5B5C2F21280C96EF48319054D1C32ACC3F0BD9EE9` |
 
 A conferência reproduzível encontrou:
 
@@ -146,6 +148,22 @@ SHA-256
 `7F0418A8A78DE71E5EE97DD4336C0E6F3DE589F969B81C0F3889AC898CB0DD7A`.
 Ele foi instalado e aberto no mesmo Samsung SM-X810 para a repetição manual.
 
+### Repetição manual após a correção
+
+O orientador executou a coleta `BP-002` na versão corrigida e aguardou antes de
+salvar. O JSON registrou início em `2026-08-31T02:00:37.608605Z` e término em
+`2026-08-31T02:01:07.611105Z`, diferença de 30,0025 segundos. Assim, o horário
+final passou a representar o término do temporizador e permaneceu independente
+do momento posterior de salvamento.
+
+A segunda conferência também aprovou:
+
+- 30 linhas no CSV e 30 amostras no JSON;
+- correspondência integral dos 14 campos de todas as amostras;
+- sequência de 0 a 29 e tempos decorridos de 0 a 29.000 ms;
+- BPM, SpO₂ e GSR nulos em todas as amostras;
+- ausência de campos nominais diretos no esquema exportado.
+
 ## Ocorrência de ambiente
 
 A compilação informou que o arquivo `package.xml` do componente
@@ -159,8 +177,9 @@ falha do código BluePulse.
 Este incremento valida o comportamento do software com dados artificiais. Ele
 não autoriza contato corporal, coleta com participantes nem persistência de
 amostras fisiológicas reais. A gravação e a exportação simuladas foram aprovadas
-manualmente, e a semântica do horário final foi corrigida e coberta por teste
-automatizado. Falta repetir uma exportação no tablet para confirmar manualmente
-o novo horário antes de encerrar este incremento.
+manualmente. A semântica do horário final foi corrigida, coberta por teste
+automatizado e confirmada pela exportação `BP-002` no tablet. O próximo portão
+do armazenamento é verificar a recuperação da sessão após reiniciar o
+aplicativo e, depois, oferecer um histórico local controlado.
 
 O sistema não realiza diagnóstico clínico e não deve orientar decisões médicas.

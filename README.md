@@ -90,8 +90,8 @@ execução Android.
 - evoluir a interface do OLED para apresentar informações úteis ao usuário;
 - revisar e aprovar formalmente o problema, a hipótese, os objetivos e o
   protocolo ético antes de estudos com participantes;
-- repetir no tablet a exportação após a correção automatizada do horário final;
-  a exportação anterior e a exclusão local já foram validadas;
+- verificar no tablet a recuperação de uma sessão salva após fechar e reabrir
+  o aplicativo; exportação, horário final e exclusão local já foram validados;
 - acrescentar histórico de sessões antes de persistir qualquer dado real.
 
 ## Licença

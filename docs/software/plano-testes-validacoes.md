@@ -126,9 +126,9 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   foi corrigido para congelar o horário ao concluir a contagem, e um teste de
   regressão confirmou que um salvamento posterior não o altera. A exclusão local
   foi aprovada manualmente no tablet, com confirmação visual da remoção.
-  Permanecem pendentes a repetição manual da exportação corrigida, a tela de
-  histórico, o teste após reinicialização e a política para qualquer
-  persistência de dados reais.
+  A repetição manual `BP-002` confirmou duração de 30,0025 segundos mesmo com
+  salvamento posterior. Permanecem pendentes a tela de histórico, o teste após
+  reinicialização e a política para qualquer persistência de dados reais.
 
 - [ ] **8. Definir e testar o protocolo BLE sem depender do sensor**
   Referência: `especificacao-mvp.md > Arquitetura lógica`

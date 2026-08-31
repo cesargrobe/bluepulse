@@ -311,3 +311,13 @@ na persistência. O teste de regressão usa início às 21:00:00, conclusão às
 ocorrências. O APK corrigido, com 180.094.930 bytes e SHA-256
 `7F0418A8A78DE71E5EE97DD4336C0E6F3DE589F969B81C0F3889AC898CB0DD7A`,
 foi instalado e aberto no Samsung SM-X810 para repetição manual.
+
+### Repetição BP-002
+
+Na versão corrigida, o orientador executou a sessão `BP-002`, esperou após o
+término e só então salvou e exportou. Os horários UTC do JSON diferiram por
+30,0025 segundos, comprovando que o salvamento posterior não modifica mais o
+término registrado. CSV e JSON apresentaram as mesmas 30 amostras, com sequência
+de 0 a 29 e sem BPM, SpO₂ ou GSR. Os arquivos originais e seus códigos SHA-256
+foram incorporados à evidência. O portão de gravação, exportação, correção do
+horário e exclusão simuladas está concluído.
