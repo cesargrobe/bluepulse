@@ -15,6 +15,7 @@ manter o modo simulado para testes reproduzíveis.
 - modo simulado determinístico com quatro cenários de qualidade;
 - sessão simulada automática de 30 segundos, com pausa e continuação;
 - gravação explícita de sessões simuladas na área privada do aplicativo;
+- histórico local de sessões simuladas, recuperado após reabrir o aplicativo;
 - exportação auditável em CSV e JSON pelo compartilhamento do Android;
 - exclusão local com confirmação;
 - pausa oceânica visual opcional de 30 segundos, sem áudio nesta versão;
@@ -35,7 +36,7 @@ flutter test
 flutter build apk --debug
 ```
 
-O conjunto atual possui 21 testes automatizados. O histórico dos testes e as
+O conjunto atual possui 24 testes automatizados. O histórico dos testes e as
 versões das ferramentas estão na
 [evidência da primeira execução Android](../docs/software/evidencias/2026-08-30-primeira-execucao-android.md).
 
@@ -43,6 +44,8 @@ O armazenamento deste incremento aceita exclusivamente a sessão simulada de
 30 segundos. O JSON preserva metadados, autorrelato inicial, limiares
 provisórios e 30 amostras artificiais. O CSV apresenta uma linha por amostra.
 Ambos mantêm BPM, SpO₂ e GSR vazios e identificam a origem como `simulated`.
+As coletas salvas podem ser consultadas, exportadas novamente ou excluídas no
+histórico local. Amostras BLE reais não aparecem nesse histórico.
 
 ## Limite de uso
 

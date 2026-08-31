@@ -13,6 +13,7 @@ void main() {
       findsOneWidget,
     );
     expect(find.text('Iniciar sessão experimental'), findsOneWidget);
+    expect(find.text('Histórico de coletas simuladas'), findsOneWidget);
   });
 
   testWidgets('exige código anônimo válido e confirmação de privacidade', (

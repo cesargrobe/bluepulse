@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'screens/presentation_screen.dart';
+import 'storage/session_repository.dart';
 
 class BluePulseApp extends StatelessWidget {
-  const BluePulseApp({super.key});
+  const BluePulseApp({this.repository, super.key});
+
+  final SessionStore? repository;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class BluePulseApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const PresentationScreen(),
+      home: PresentationScreen(repository: repository),
     );
   }
 }

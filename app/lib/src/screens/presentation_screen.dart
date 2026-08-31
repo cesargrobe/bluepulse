@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../storage/session_repository.dart';
+import 'session_history_screen.dart';
 import 'session_code_screen.dart';
 
 class PresentationScreen extends StatelessWidget {
-  const PresentationScreen({super.key});
+  const PresentationScreen({this.repository, super.key});
+
+  final SessionStore? repository;
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +82,24 @@ class PresentationScreen extends StatelessWidget {
                     label: const Text('Iniciar sessão experimental'),
                   ),
                   const SizedBox(height: 12),
+                  OutlinedButton.icon(
+                    key: const Key('open-session-history'),
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute<void>(
+                          builder: (_) =>
+                              SessionHistoryScreen(repository: repository),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.history_rounded),
+                    label: const Text('Histórico de coletas simuladas'),
+                  ),
+                  const SizedBox(height: 12),
                   const Text(
-                    'Nesta fase, nenhum dado será salvo ou enviado pela internet.',
+                    'Somente coletas simuladas salvas explicitamente ficam na '
+                    'área privada do aplicativo. Nenhum dado é enviado pela '
+                    'internet.',
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),

@@ -53,7 +53,8 @@ primeira conexão BLE real com o ESP32 já foi realizada, transmitindo IR bruto,
 movimento e qualidade pelo protocolo v1; essas amostras reais ainda permanecem
 somente na memória. A sessão simulada de 30 segundos já pode ser salva na área
 privada do aplicativo, exportada em CSV e JSON ou excluída sob confirmação. Há
-também uma primeira pausa oceânica visual opcional, ainda sem áudio. Os
+também um histórico local exclusivo para coletas simuladas e uma primeira pausa
+oceânica visual opcional, ainda sem áudio. Os
 incrementos passam por análise estática, testes automatizados, compilação e
 execução Android.
 
@@ -71,6 +72,7 @@ execução Android.
 - [Evidência da seleção de fonte e monitoramento simulado](docs/software/evidencias/2026-08-30-monitoramento-simulado.md)
 - [Evidência da sessão temporizada e pausa oceânica](docs/software/evidencias/2026-08-30-sessao-temporizada-pausa-oceanica.md)
 - [Evidência da persistência e exportação simulada](docs/software/evidencias/2026-08-30-persistencia-exportacao-simulada.md)
+- [Evidência do histórico de sessões simuladas](docs/software/evidencias/2026-08-31-historico-sessoes-simuladas.md)
 - [Evidência da primeira conexão BLE real](docs/software/evidencias/2026-08-30-primeira-conexao-ble-real.md)
 - [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
@@ -90,9 +92,9 @@ execução Android.
 - evoluir a interface do OLED para apresentar informações úteis ao usuário;
 - revisar e aprovar formalmente o problema, a hipótese, os objetivos e o
   protocolo ético antes de estudos com participantes;
-- verificar no tablet a recuperação de uma sessão salva após fechar e reabrir
-  o aplicativo; exportação, horário final e exclusão local já foram validados;
-- acrescentar histórico de sessões antes de persistir qualquer dado real.
+- confirmar visualmente no tablet que a coleta `BP-002` reaparece no novo
+  histórico após fechar e reabrir o aplicativo;
+- definir uma política formal antes de persistir qualquer dado fisiológico real.
 
 ## Licença
 

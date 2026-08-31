@@ -321,3 +321,19 @@ término registrado. CSV e JSON apresentaram as mesmas 30 amostras, com sequênc
 de 0 a 29 e sem BPM, SpO₂ ou GSR. Os arquivos originais e seus códigos SHA-256
 foram incorporados à evidência. O portão de gravação, exportação, correção do
 horário e exclusão simuladas está concluído.
+
+## 31/08/2026 — histórico local de coletas simuladas
+
+Foi acrescentado à tela inicial o acesso ao histórico. A nova tela lê os JSONs
+da área privada e apresenta código anônimo, início UTC, duração e quantidade de
+amostras. Também permite nova exportação e exclusão confirmada, mantendo
+explícitos a origem simulada, a ausência de diagnóstico e a indisponibilidade
+de BPM, SpO₂ e GSR. Dados BLE reais continuam fora do armazenamento.
+
+Foram incluídos testes para sessão existente, recuperação após recriar a tela,
+estado vazio e exclusão. Os 24 testes foram aprovados e a análise estática não
+encontrou ocorrências. O APK, com 180.104.326 bytes e SHA-256
+`FCCB1BDCB8CBF6090CC975AB8B2DF147E336F8515C8EA2CEBEA240F193EC5647`,
+foi instalado no Samsung SM-X810 preservando dados. Após encerramento forçado e
+nova abertura, a inspeção técnica confirmou que `BP-002` permanecia na pasta
+privada. Falta confirmar visualmente sua apresentação na nova tela.
