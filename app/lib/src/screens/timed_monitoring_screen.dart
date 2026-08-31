@@ -33,6 +33,7 @@ class _TimedMonitoringScreenState extends State<TimedMonitoringScreen> {
   final List<SensorSample> _capturedSamples = [];
   Timer? _timer;
   DateTime? _startedAtUtc;
+  DateTime? _endedAtUtc;
   RecordedSession? _recordedSession;
   bool _storageBusy = false;
   String? _storageMessage;
@@ -54,6 +55,7 @@ class _TimedMonitoringScreenState extends State<TimedMonitoringScreen> {
       ..clear()
       ..add(_simulator.sampleAt(0));
     _startedAtUtc = _now();
+    _endedAtUtc = null;
     _recordedSession = null;
     _storageMessage = null;
     setState(_clock.start);
@@ -71,6 +73,9 @@ class _TimedMonitoringScreenState extends State<TimedMonitoringScreen> {
         if (elapsed > previousElapsed && elapsed < _clock.totalSeconds) {
           _capturedSamples.add(_simulator.sampleAt(elapsed));
         }
+        if (_clock.status == SessionClockStatus.completed) {
+          _endedAtUtc ??= _now();
+        }
       });
       if (_clock.status == SessionClockStatus.completed) _timer?.cancel();
     });
@@ -78,7 +83,13 @@ class _TimedMonitoringScreenState extends State<TimedMonitoringScreen> {
 
   Future<void> _saveCollection() async {
     final startedAt = _startedAtUtc;
-    if (startedAt == null || _capturedSamples.isEmpty || _storageBusy) return;
+    final endedAt = _endedAtUtc;
+    if (startedAt == null ||
+        endedAt == null ||
+        _capturedSamples.isEmpty ||
+        _storageBusy) {
+      return;
+    }
 
     setState(() {
       _storageBusy = true;
@@ -88,7 +99,7 @@ class _TimedMonitoringScreenState extends State<TimedMonitoringScreen> {
       final session = RecordedSession.fromSimulation(
         draft: widget.sessionDraft,
         startedAtUtc: startedAt,
-        endedAtUtc: _now(),
+        endedAtUtc: endedAt,
         samples: _capturedSamples,
       );
       await _repository.save(session);

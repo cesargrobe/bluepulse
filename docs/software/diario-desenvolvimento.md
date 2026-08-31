@@ -293,4 +293,21 @@ A auditoria também identificou que `ended_at_utc` foi gravado no momento da
 ação de salvar, cerca de 44,99 segundos após o início, e não ao término nominal
 da coleta. As amostras continuam cobrindo corretamente os 30 instantes
 simulados, mas a semântica do horário final será corrigida antes de seu uso em
-cálculos de duração. O teste manual de exclusão local ainda está pendente.
+cálculos de duração.
+
+O orientador também confirmou a exclusão no tablet. Após a confirmação, a tela
+informou **Coleta simulada excluída do dispositivo**, retirou as ações de
+exportação e exclusão e voltou a oferecer a gravação da coleta simulada. A
+captura dessa etapa foi preservada na evidência, concluindo o portão manual de
+exclusão local.
+
+### Correção do horário final
+
+O horário final deixou de ser calculado na ação de salvar. O aplicativo agora o
+captura uma única vez quando o temporizador chega a zero e reutiliza esse valor
+na persistência. O teste de regressão usa início às 21:00:00, conclusão às
+21:00:30 e salvamento às 21:00:45, confirmando que `ended_at_utc` permanece em
+21:00:30. Os 21 testes foram aprovados e a análise estática não encontrou
+ocorrências. O APK corrigido, com 180.094.930 bytes e SHA-256
+`7F0418A8A78DE71E5EE97DD4336C0E6F3DE589F969B81C0F3889AC898CB0DD7A`,
+foi instalado e aberto no Samsung SM-X810 para repetição manual.

@@ -21,23 +21,29 @@ void main() {
       ),
       dataOrigin: DataOrigin.simulated,
     );
+    final startedAt = DateTime.utc(2026, 8, 30, 21);
+    final completedAt = DateTime.utc(2026, 8, 30, 21, 0, 30);
+    final savedAt = DateTime.utc(2026, 8, 30, 21, 0, 45);
+    var currentTime = startedAt;
 
     await tester.pumpWidget(
       MaterialApp(
         home: TimedMonitoringScreen(
           sessionDraft: draft,
           repository: repository,
-          now: () => DateTime.utc(2026, 8, 30, 21),
+          now: () => currentTime,
         ),
       ),
     );
 
     await tester.tap(find.byKey(const Key('start-timed-monitoring')));
+    currentTime = completedAt;
     await tester.pump(const Duration(seconds: 30));
     expect(find.text('Monitoramento concluído'), findsOneWidget);
     expect(find.text('30 amostras artificiais'), findsOneWidget);
 
     final saveButton = find.byKey(const Key('save-simulated-recording'));
+    currentTime = savedAt;
     await tester.ensureVisible(saveButton);
     await tester.tap(saveButton);
     await tester.pumpAndSettle();
@@ -45,6 +51,8 @@ void main() {
     expect(find.byKey(const Key('export-simulated-recording')), findsOneWidget);
     expect(find.byKey(const Key('delete-simulated-recording')), findsOneWidget);
     expect(repository.session?.samples, hasLength(30));
+    expect(repository.session?.startedAtUtc, startedAt);
+    expect(repository.session?.endedAtUtc, completedAt);
 
     final deleteButton = find.byKey(const Key('delete-simulated-recording'));
     await tester.ensureVisible(deleteButton);

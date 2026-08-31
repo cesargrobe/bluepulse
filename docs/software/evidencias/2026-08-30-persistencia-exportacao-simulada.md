@@ -67,7 +67,7 @@ reais permanece desabilitado.
 | abertura do aplicativo | aprovada |
 | avaliação manual da exportação | aprovada no Samsung SM-X810 |
 | conferência cruzada entre CSV e JSON | aprovada, 30 de 30 amostras correspondentes |
-| avaliação manual da exclusão local | pendente |
+| avaliação manual da exclusão local | aprovada no Samsung SM-X810 |
 
 Ferramentas utilizadas:
 
@@ -94,6 +94,7 @@ foram preservados sem alteração neste repositório.
 | [`BP-001_2026-08-31T01-25-04.370770Z.csv`](dados/2026-08-30/BP-001_2026-08-31T01-25-04.370770Z.csv) | 2.878 bytes | `916AB0ED6BED8B65A9B95EE88DF2181B414C0005AB8BC4DF404B89EE51EA8E6F` |
 | [`BP-001_2026-08-31T01-25-04.370770Z.json`](dados/2026-08-30/BP-001_2026-08-31T01-25-04.370770Z.json) | 10.658 bytes | `B6BD382055CE02FBE553E53751C133F7BCB511A5B8B44F5E649287396D0EA44D` |
 | `persistencia-exportacao-simulada-tablet.jpg` | 467.008 bytes | `4466C4F5FC8B3C3A8114FE51D2A572C715E2A2922A9D5630306678E500C0BECE` |
+| `exclusao-coleta-simulada-tablet.jpg` | 458.416 bytes | `192554EDB1E46BA1DB238A280432A4E1D1C99D80ED55F9672E1E55D38205C379` |
 
 A conferência reproduzível encontrou:
 
@@ -111,6 +112,16 @@ A conferência reproduzível encontrou:
 - diagnóstico e inferências de estresse ou ansiedade marcados como
   indisponíveis.
 
+## Exclusão manual no dispositivo
+
+Após a exportação, o orientador acionou **Excluir coleta local** e confirmou a
+operação. A interface exibiu **Coleta simulada excluída do dispositivo**, removeu
+as ações de exportar e excluir e voltou a apresentar **Salvar coleta simulada**.
+Esse comportamento confirma que a sessão deixou de estar associada a um arquivo
+persistido no fluxo atual do aplicativo.
+
+![Confirmação da exclusão local](imagens/2026-08-30/exclusao-coleta-simulada-tablet.jpg)
+
 ### Observação detectada pela auditoria
 
 O campo `started_at_utc` registra `2026-08-31T01:25:04.370770Z`, enquanto
@@ -121,6 +132,19 @@ versão, `ended_at_utc` é preenchido no momento em que o usuário toca em salva
 e não no instante em que o temporizador chega a zero. A divergência não altera
 as 30 amostras simuladas, mas deve ser corrigida antes de usar esses horários
 para calcular duração de coleta.
+
+Após a auditoria, o aplicativo passou a capturar `ended_at_utc` no instante em
+que o temporizador muda para concluído e a reutilizar esse valor ao salvar. Um
+teste de regressão simula a conclusão aos 30 segundos e o salvamento somente aos
+45 segundos; o arquivo conserva corretamente o horário dos 30 segundos. Os
+arquivos `BP-001` acima permanecem inalterados como evidência da versão
+efetivamente ensaiada.
+
+A versão corrigida foi submetida aos 21 testes automatizados e à análise
+estática, sem ocorrências. O novo APK de depuração possui 180.094.930 bytes e
+SHA-256
+`7F0418A8A78DE71E5EE97DD4336C0E6F3DE589F969B81C0F3889AC898CB0DD7A`.
+Ele foi instalado e aberto no mesmo Samsung SM-X810 para a repetição manual.
 
 ## Ocorrência de ambiente
 
@@ -135,7 +159,8 @@ falha do código BluePulse.
 Este incremento valida o comportamento do software com dados artificiais. Ele
 não autoriza contato corporal, coleta com participantes nem persistência de
 amostras fisiológicas reais. A gravação e a exportação simuladas foram aprovadas
-manualmente; ainda é necessário testar a exclusão local e corrigir a semântica
-do horário final antes de encerrar este incremento.
+manualmente, e a semântica do horário final foi corrigida e coberta por teste
+automatizado. Falta repetir uma exportação no tablet para confirmar manualmente
+o novo horário antes de encerrar este incremento.
 
 O sistema não realiza diagnóstico clínico e não deve orientar decisões médicas.

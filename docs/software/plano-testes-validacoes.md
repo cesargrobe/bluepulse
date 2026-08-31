@@ -122,10 +122,13 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   O APK foi instalado no tablet. A gravação e a exportação foram aprovadas
   manualmente: CSV e JSON apresentaram 30 amostras correspondentes, sequência
   contínua e ausência de campos nominais diretos. A auditoria detectou que
-  `ended_at_utc` registra o toque em salvar, não o fim do temporizador; a
-  correção desse significado está pendente. Também permanecem pendentes o teste
-  manual de exclusão, a tela de histórico, o teste após reinicialização e a
-  política para qualquer persistência de dados reais.
+  `ended_at_utc` registrava o toque em salvar, não o fim do temporizador. O código
+  foi corrigido para congelar o horário ao concluir a contagem, e um teste de
+  regressão confirmou que um salvamento posterior não o altera. A exclusão local
+  foi aprovada manualmente no tablet, com confirmação visual da remoção.
+  Permanecem pendentes a repetição manual da exportação corrigida, a tela de
+  histórico, o teste após reinicialização e a política para qualquer
+  persistência de dados reais.
 
 - [ ] **8. Definir e testar o protocolo BLE sem depender do sensor**
   Referência: `especificacao-mvp.md > Arquitetura lógica`
