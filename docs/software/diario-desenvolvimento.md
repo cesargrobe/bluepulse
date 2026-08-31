@@ -236,3 +236,11 @@ frequência nominal de 200 ms, a contagem equivale a aproximadamente 79,2
 segundos, sem substituir uma medição independente de tempo. O resultado vale
 somente para esse intervalo e condições de ensaio. A mesma tela preservou BPM,
 SpO₂ e GSR como indisponíveis e exibiu o limite de não diagnóstico clínico.
+
+O ensaio foi repetido por intervalo maior na mesma bancada. A nova captura
+registrou 682 pacotes, 0 lacunas, 0 duplicações, 0 pacotes fora de ordem e
+entrega observada de 100,00% nessa conexão. Na frequência nominal, a contagem
+equivale a aproximadamente 136,4 segundos. O resultado reproduz a integridade
+observada, mas não mede latência nem permite generalização para outras condições
+de rádio. A comparação exata entre uma mesma amostra no monitor serial e no
+tablet permanece pendente.

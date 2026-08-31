@@ -95,6 +95,33 @@ ou durações.
 | --- | ---: | --- |
 | `integridade-ble-396-pacotes.jpg` | 550.021 bytes | `2BFCA09612D1A807DA4420793698ACB3D591989CD602D1438905B73AC907132A` |
 
+### Repetição ampliada na bancada
+
+Uma nova conexão foi observada por intervalo maior. A segunda captura registra:
+
+- sequência atual `722`;
+- IR bruto `6285`;
+- índice de movimento `0.002`;
+- MPU65xx com leitura válida;
+- estado **Contato provisório detectado**;
+- `682` pacotes recebidos;
+- `0` lacunas de sequência;
+- `0` pacotes duplicados;
+- `0` pacotes fora de ordem;
+- entrega observada de `100,00%` nessa conexão.
+
+Na frequência nominal de uma notificação a cada 200 ms, 682 pacotes equivalem
+a aproximadamente 136,4 segundos. A contagem maior reproduziu o resultado de
+integridade do primeiro ensaio nas mesmas condições gerais de bancada. Ela não
+mede latência e não demonstra o comportamento em outras distâncias, fontes de
+interferência ou períodos prolongados.
+
+![Integridade da transmissão BLE após 682 pacotes](imagens/2026-08-30/integridade-ble-682-pacotes.jpg)
+
+| Arquivo | Tamanho | SHA-256 |
+| --- | ---: | --- |
+| `integridade-ble-682-pacotes.jpg` | 549.416 bytes | `940F32D5001F0789AF3F02BC2BB1F223C29E3C414EA2FF74CD7A30CF369EB8A8` |
+
 ## Verificações técnicas anteriores ao ensaio
 
 | Verificação | Resultado |
@@ -111,6 +138,7 @@ ou durações.
 | nova localização e reconexão | aprovadas no tablet |
 | retomada da sequência de notificações | aprovada; sequência crescente observada |
 | integridade em uma conexão de 396 pacotes | aprovada; 0 lacunas, 0 duplicações e 0 fora de ordem |
+| repetição ampliada com 682 pacotes | aprovada; 0 lacunas, 0 duplicações e 0 fora de ordem |
 
 ## Limites e próximos testes
 
