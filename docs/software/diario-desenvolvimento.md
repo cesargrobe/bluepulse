@@ -244,3 +244,18 @@ equivale a aproximadamente 136,4 segundos. O resultado reproduz a integridade
 observada, mas não mede latência nem permite generalização para outras condições
 de rádio. A comparação exata entre uma mesma amostra no monitor serial e no
 tablet permanece pendente.
+
+### Comparação serial e BLE da mesma amostra
+
+Foi realizada uma coleta simultânea pela porta USB COM6 e pelo BLE, sem
+reinicializar o ESP32. Na sequência 2427, o monitor serial registrou IR 6275,
+movimento 0,069, MPU `OK` e BLE conectado. O tablet exibiu a mesma sequência,
+o mesmo IR, o mesmo movimento e MPU65xx com leitura válida. Assim, a preservação
+dos campos do pacote BluePulse BLE v1 foi aprovada para essa amostra.
+
+O log serial preserva 484 linhas consecutivas, das sequências 2139 a 2622. Na
+mesma captura, o aplicativo havia recebido 2387 pacotes sem lacunas,
+duplicações ou inversões, com entrega observada de 100,00%. Isso corresponde a
+aproximadamente 477,4 segundos na taxa nominal. A medição de latência continua
+pendente, pois ainda não existe timestamp no pacote nem referência temporal
+independente.

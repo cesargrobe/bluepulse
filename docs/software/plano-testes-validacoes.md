@@ -143,9 +143,12 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   registrou 396 pacotes, 0 lacunas, 0 duplicações, 0 fora de ordem e entrega
   observada de 100,00% nessa conexão. Uma repetição ampliada registrou 682
   pacotes, novamente com 0 lacunas, 0 duplicações, 0 fora de ordem e 100,00%
-  de entrega observada na conexão. Permanecem pendentes a comparação
-  simultânea com a serial, a medição de atraso com referência independente,
-  exportação e repetição controlada dos estados e das condições de comunicação.
+  de entrega observada na conexão. A comparação simultânea foi concluída na
+  sequência 2427: sequência, IR, movimento e validade do MPU coincidiram entre
+  o monitor serial e o tablet. A mesma conexão chegou a 2387 pacotes sem
+  ocorrência nos contadores de integridade. Permanecem pendentes a medição de
+  atraso com referência independente, exportação e repetição controlada dos
+  estados e das condições de comunicação.
 
 - [ ] **10. Validar qualidade de sinal e BPM antes de exibi-lo**
   Referência: `especificacao-mvp.md > Regras de segurança e linguagem`

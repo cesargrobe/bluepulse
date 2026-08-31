@@ -122,6 +122,50 @@ interferência ou períodos prolongados.
 | --- | ---: | --- |
 | `integridade-ble-682-pacotes.jpg` | 549.416 bytes | `940F32D5001F0789AF3F02BC2BB1F223C29E3C414EA2FF74CD7A30CF369EB8A8` |
 
+## Comparação simultânea entre USB serial e BLE
+
+Para verificar se o aplicativo preserva os valores produzidos pelo firmware,
+o monitor USB da COM6 foi mantido em `115200` baud enquanto o tablet continuava
+recebendo notificações por BLE. O log serial foi gravado sem reinicializar o
+ESP32 e a tela do tablet foi capturada durante a mesma coleta.
+
+A sequência `2427` foi localizada no log e comparada campo a campo:
+
+| Campo | Monitor serial do ESP32 | Aplicativo no tablet | Resultado |
+| --- | ---: | ---: | --- |
+| sequência | `2427` | `2427` | idêntico |
+| IR bruto | `6275` | `6275` | idêntico |
+| movimento | `0.069` | `0.069` | idêntico |
+| MPU65xx | `OK` | leitura válida | semanticamente idêntico |
+| estado BLE | `CONECTADO` | recebendo amostras reais | coerente |
+
+A linha original preservada é:
+
+```text
+SEQ=2427 | IR=6275 | MOV=0.069 | MPU=OK | BLE=CONECTADO
+```
+
+O log contém 484 linhas consecutivas, da sequência `2139` à `2622`. A captura
+do tablet registra, na mesma conexão, `2387` pacotes recebidos, 0 lacunas, 0
+duplicações, 0 pacotes fora de ordem e entrega observada de 100,00%. Como a
+sequência atual é `2427`, os contadores são consistentes com uma conexão
+iniciada na sequência `41`. Na taxa nominal de 200 ms, 2387 pacotes equivalem a
+aproximadamente 477,4 segundos, ou 7 minutos e 57,4 segundos.
+
+Essa comparação aprova a preservação dos campos do pacote BluePulse BLE v1
+nesta amostra e neste ensaio. Ela não mede latência, pois o pacote atual não
+transporta timestamp e não foi usada uma referência temporal independente.
+
+![Comparação serial e BLE na sequência 2427](imagens/2026-08-30/comparacao-serial-ble-sequencia-2427.jpg)
+
+| Arquivo | Tamanho | SHA-256 |
+| --- | ---: | --- |
+| `comparacao-serial-ble-sequencia-2427.jpg` | 551.142 bytes | `4984112B11A4D596407ED37F28DE1DA32B0311669B57B56E5272D759B3EA78A6` |
+| `comparacao-serial-ble.log` | 27.600 bytes | `524C2CB9DF059E23D1983572D110D234A7F51B9B3C0B2AD2526B48E84C2DB67F` |
+
+O log completo está em
+[`logs/2026-08-30/comparacao-serial-ble.log`](logs/2026-08-30/comparacao-serial-ble.log).
+
 ## Verificações técnicas anteriores ao ensaio
 
 | Verificação | Resultado |
@@ -139,13 +183,14 @@ interferência ou períodos prolongados.
 | retomada da sequência de notificações | aprovada; sequência crescente observada |
 | integridade em uma conexão de 396 pacotes | aprovada; 0 lacunas, 0 duplicações e 0 fora de ordem |
 | repetição ampliada com 682 pacotes | aprovada; 0 lacunas, 0 duplicações e 0 fora de ordem |
+| comparação da mesma amostra por serial e BLE | aprovada na sequência 2427; campos idênticos |
+| integridade ampliada até 2387 pacotes | aprovada; 0 lacunas, 0 duplicações e 0 fora de ordem |
 
 ## Limites e próximos testes
 
 Esta evidência valida a primeira conexão, a recepção, a desconexão controlada e
 a reconexão com retomada das notificações. Ainda permanecem pendentes:
 
-- comparação simultânea entre sequência/valores no monitor serial e no tablet;
 - repetição da medição de perda, duplicação e ordem em outras condições;
 - medição específica de atraso com referência temporal independente;
 - repetição controlada dos estados sem contato, contato e movimento;
