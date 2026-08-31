@@ -259,3 +259,24 @@ duplicações ou inversões, com entrega observada de 100,00%. Isso corresponde 
 aproximadamente 477,4 segundos na taxa nominal. A medição de latência continua
 pendente, pois ainda não existe timestamp no pacote nem referência temporal
 independente.
+
+## 30/08/2026 — persistência e exportação de coleta simulada
+
+Foi implementado o primeiro incremento de armazenamento local, limitado à
+sessão simulada de 30 segundos. Ao término, o usuário decide explicitamente se
+deseja salvar as 30 amostras artificiais. A coleta fica na área privada do
+aplicativo e pode ser exportada em CSV e JSON pelo compartilhamento do Android
+ou excluída após confirmação.
+
+O JSON usa esquema versão 1 e preserva código anônimo, horários UTC, versão do
+aplicativo e do simulador, autorrelato inicial, limiares provisórios e amostras.
+O CSV apresenta uma linha por amostra. A origem é identificada como simulada;
+BPM, SpO₂, GSR, diagnóstico e inferências de estresse ou ansiedade permanecem
+indisponíveis. Nenhuma amostra BLE real é persistida neste incremento.
+
+A análise estática não encontrou ocorrências e 21 testes automatizados foram
+aprovados. O APK de depuração foi compilado, instalado e aberto no tablet
+Samsung SM-X810. A compilação emitiu avisos sobre um `package.xml` corrompido do
+componente `skiaparser` do SDK Android, mas concluiu após instalar o CMake
+3.22.1. A inspeção manual da gravação, exportação e exclusão no tablet permanece
+como portão antes de ampliar o armazenamento.

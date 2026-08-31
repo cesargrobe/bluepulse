@@ -50,10 +50,12 @@ O primeiro aplicativo Android já foi criado em Flutter. Ele apresenta o aviso
 de uso experimental, solicita um código anônimo e oferece um autorrelato inicial
 provisório. O monitoramento simulado percorre quatro estados reproduzíveis. A
 primeira conexão BLE real com o ESP32 já foi realizada, transmitindo IR bruto,
-movimento e qualidade pelo protocolo v1; os dados ainda permanecem somente na
-memória. Há também uma sessão automática de 30 segundos e uma primeira pausa
-oceânica visual opcional, ainda sem áudio. Os incrementos passam por análise
-estática, testes automatizados, compilação e execução Android.
+movimento e qualidade pelo protocolo v1; essas amostras reais ainda permanecem
+somente na memória. A sessão simulada de 30 segundos já pode ser salva na área
+privada do aplicativo, exportada em CSV e JSON ou excluída sob confirmação. Há
+também uma primeira pausa oceânica visual opcional, ainda sem áudio. Os
+incrementos passam por análise estática, testes automatizados, compilação e
+execução Android.
 
 ## Documentação e firmware
 
@@ -68,6 +70,7 @@ estática, testes automatizados, compilação e execução Android.
 - [Evidência do código anônimo e autorrelato inicial](docs/software/evidencias/2026-08-30-codigo-anonimo-autorrelato.md)
 - [Evidência da seleção de fonte e monitoramento simulado](docs/software/evidencias/2026-08-30-monitoramento-simulado.md)
 - [Evidência da sessão temporizada e pausa oceânica](docs/software/evidencias/2026-08-30-sessao-temporizada-pausa-oceanica.md)
+- [Evidência da persistência e exportação simulada](docs/software/evidencias/2026-08-30-persistencia-exportacao-simulada.md)
 - [Evidência da primeira conexão BLE real](docs/software/evidencias/2026-08-30-primeira-conexao-ble-real.md)
 - [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
@@ -87,7 +90,8 @@ estática, testes automatizados, compilação e execução Android.
 - evoluir a interface do OLED para apresentar informações úteis ao usuário;
 - revisar e aprovar formalmente o problema, a hipótese, os objetivos e o
   protocolo ético antes de estudos com participantes;
-- desenvolver e testar o aplicativo inicialmente com dados simulados.
+- validar manualmente no tablet a exportação CSV/JSON e a exclusão local;
+- acrescentar histórico de sessões antes de persistir qualquer dado real.
 
 ## Licença
 

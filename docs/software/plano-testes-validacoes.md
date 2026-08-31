@@ -113,6 +113,15 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   informa origem e versões; nenhum dado nominal é incluído.
   Verificação: teste de gravação/leitura, comparação entre arquivo exportado e
   sessão original, teste de caracteres e fusos horários.
+  Estado em 30/08/2026: primeiro incremento implementado somente para a sessão
+  simulada de 30 segundos. A gravação é explícita e ocorre na área privada do
+  aplicativo; CSV e JSON podem ser compartilhados pelo Android; a exclusão
+  exige confirmação. Os arquivos registram origem simulada, versões,
+  autorrelato, limiares provisórios e métricas indisponíveis. Gravação, leitura,
+  serialização, exportação e exclusão foram aprovadas em testes automatizados.
+  O APK foi instalado no tablet. Permanecem pendentes a avaliação manual dos
+  arquivos exportados, a tela de histórico, o teste após reinicialização e a
+  política para qualquer persistência de dados reais.
 
 - [ ] **8. Definir e testar o protocolo BLE sem depender do sensor**
   Referência: `especificacao-mvp.md > Arquitetura lógica`
