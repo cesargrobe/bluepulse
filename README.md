@@ -61,6 +61,7 @@ execução Android.
 ## Documentação e firmware
 
 - [Índice completo da documentação](docs/README.md)
+- [Roteiro para a apresentação à banca de 03/09/2026](docs/apresentacoes/2026-09-03-roteiro-banca-emanuelle.md)
 - [Visão científica, problema, hipótese e objetivos](docs/pesquisa/visao-geral.md)
 - [Proposta inicial e autoria](docs/pesquisa/proposta-inicial-emanuelle.md)
 - [Evolução conceitual do projeto](docs/pesquisa/evolucao-conceitual.md)

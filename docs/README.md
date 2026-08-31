@@ -53,6 +53,10 @@ integrada.
 - [Decisão 0002 — Flutter com Android primeiro](decisoes/0002-flutter-android-primeiro.md)
 - [Histórico inicial de aquisição](aquisicao/historico-inicial.md)
 
+### Apresentações
+
+- [Roteiro de Emanuelle para a banca de 03/09/2026](apresentacoes/2026-09-03-roteiro-banca-emanuelle.md)
+
 ### Dados
 
 - [Manifesto dos dados brutos de 29/08/2026](../dados/brutos/2026-08-29/README.md)
