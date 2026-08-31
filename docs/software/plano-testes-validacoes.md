@@ -119,8 +119,12 @@ Nenhuma dessas etapas, isoladamente, constitui validação clínica.
   exige confirmação. Os arquivos registram origem simulada, versões,
   autorrelato, limiares provisórios e métricas indisponíveis. Gravação, leitura,
   serialização, exportação e exclusão foram aprovadas em testes automatizados.
-  O APK foi instalado no tablet. Permanecem pendentes a avaliação manual dos
-  arquivos exportados, a tela de histórico, o teste após reinicialização e a
+  O APK foi instalado no tablet. A gravação e a exportação foram aprovadas
+  manualmente: CSV e JSON apresentaram 30 amostras correspondentes, sequência
+  contínua e ausência de campos nominais diretos. A auditoria detectou que
+  `ended_at_utc` registra o toque em salvar, não o fim do temporizador; a
+  correção desse significado está pendente. Também permanecem pendentes o teste
+  manual de exclusão, a tela de histórico, o teste após reinicialização e a
   política para qualquer persistência de dados reais.
 
 - [ ] **8. Definir e testar o protocolo BLE sem depender do sensor**

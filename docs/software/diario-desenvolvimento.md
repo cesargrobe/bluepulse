@@ -278,5 +278,19 @@ A análise estática não encontrou ocorrências e 21 testes automatizados foram
 aprovados. O APK de depuração foi compilado, instalado e aberto no tablet
 Samsung SM-X810. A compilação emitiu avisos sobre um `package.xml` corrompido do
 componente `skiaparser` do SDK Android, mas concluiu após instalar o CMake
-3.22.1. A inspeção manual da gravação, exportação e exclusão no tablet permanece
-como portão antes de ampliar o armazenamento.
+3.22.1.
+
+### Inspeção dos arquivos exportados no tablet
+
+O orientador concluiu a sessão simulada no Samsung SM-X810, salvou a coleta
+`BP-001` e exportou os formatos CSV e JSON. A inspeção confirmou 30 amostras,
+sequência de 0 a 29, tempos decorridos de 0 a 29.000 ms e correspondência
+integral dos 14 campos entre os dois formatos. BPM, SpO₂ e GSR permaneceram
+nulos; o esquema não contém campos nominais diretos. A captura e os arquivos
+originais, acompanhados de SHA-256, foram incorporados à evidência do ensaio.
+
+A auditoria também identificou que `ended_at_utc` foi gravado no momento da
+ação de salvar, cerca de 44,99 segundos após o início, e não ao término nominal
+da coleta. As amostras continuam cobrindo corretamente os 30 instantes
+simulados, mas a semântica do horário final será corrigida antes de seu uso em
+cálculos de duração. O teste manual de exclusão local ainda está pendente.

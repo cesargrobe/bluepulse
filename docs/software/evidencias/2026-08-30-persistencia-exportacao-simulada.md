@@ -65,7 +65,9 @@ reais permanece desabilitado.
 | compilação Android de depuração | aprovada |
 | instalação no Samsung SM-X810 | aprovada |
 | abertura do aplicativo | aprovada |
-| avaliação manual da exportação e exclusão | pendente |
+| avaliação manual da exportação | aprovada no Samsung SM-X810 |
+| conferência cruzada entre CSV e JSON | aprovada, 30 de 30 amostras correspondentes |
+| avaliação manual da exclusão local | pendente |
 
 Ferramentas utilizadas:
 
@@ -77,6 +79,48 @@ Ferramentas utilizadas:
 O APK de depuração compilado possui 180.094.532 bytes e SHA-256
 `4FBBB2ED491372DCC7B15AFBD9F928CD8803B2292B7FCA219ED745CF5919F082`.
 O APK é artefato local de verificação e não foi adicionado ao Git.
+
+## Inspeção manual dos arquivos exportados
+
+O orientador executou a sessão no tablet e exportou os arquivos da coleta
+anônima `BP-001`. A captura da tela confirma o término do monitoramento, a
+gravação local e a preparação dos formatos CSV e JSON. Os arquivos originais
+foram preservados sem alteração neste repositório.
+
+![Conclusão e exportação da coleta simulada](imagens/2026-08-30/persistencia-exportacao-simulada-tablet.jpg)
+
+| Artefato | Tamanho | SHA-256 |
+| --- | ---: | --- |
+| [`BP-001_2026-08-31T01-25-04.370770Z.csv`](dados/2026-08-30/BP-001_2026-08-31T01-25-04.370770Z.csv) | 2.878 bytes | `916AB0ED6BED8B65A9B95EE88DF2181B414C0005AB8BC4DF404B89EE51EA8E6F` |
+| [`BP-001_2026-08-31T01-25-04.370770Z.json`](dados/2026-08-30/BP-001_2026-08-31T01-25-04.370770Z.json) | 10.658 bytes | `B6BD382055CE02FBE553E53751C133F7BCB511A5B8B44F5E649287396D0EA44D` |
+| `persistencia-exportacao-simulada-tablet.jpg` | 467.008 bytes | `4466C4F5FC8B3C3A8114FE51D2A572C715E2A2922A9D5630306678E500C0BECE` |
+
+A conferência reproduzível encontrou:
+
+- JSON válido, esquema versão 1, origem `simulated` e simulador
+  `deterministic-v1`;
+- 30 linhas de dados no CSV e 30 amostras no JSON;
+- correspondência integral dos 14 campos de cada amostra entre os formatos;
+- sequências contínuas de 0 a 29 e tempos decorridos de 0 a 29.000 ms;
+- oito ocorrências de `noContact`, oito de `stableContact`, sete de `movement`
+  e sete de `transientFailure`;
+- BPM, SpO₂ e GSR nulos nas 30 amostras;
+- ausência, no esquema exportado, de campos nominais diretos como nome, e-mail,
+  telefone, CPF, matrícula ou endereço;
+- autorrelato inicial preservado como valores brutos, sem interpretação;
+- diagnóstico e inferências de estresse ou ansiedade marcados como
+  indisponíveis.
+
+### Observação detectada pela auditoria
+
+O campo `started_at_utc` registra `2026-08-31T01:25:04.370770Z`, enquanto
+`ended_at_utc` registra `2026-08-31T01:25:49.358668Z`. O intervalo entre esses
+campos é de aproximadamente 44,99 segundos, embora as amostras cubram 30
+instantes nominais, de 0 a 29 segundos. A inspeção do código mostrou que, nesta
+versão, `ended_at_utc` é preenchido no momento em que o usuário toca em salvar,
+e não no instante em que o temporizador chega a zero. A divergência não altera
+as 30 amostras simuladas, mas deve ser corrigida antes de usar esses horários
+para calcular duração de coleta.
 
 ## Ocorrência de ambiente
 
@@ -90,8 +134,8 @@ falha do código BluePulse.
 
 Este incremento valida o comportamento do software com dados artificiais. Ele
 não autoriza contato corporal, coleta com participantes nem persistência de
-amostras fisiológicas reais. Antes de avançar, o orientador deverá executar no
-tablet uma sessão simulada, salvar, exportar os dois arquivos, verificar seu
-conteúdo e testar a exclusão local.
+amostras fisiológicas reais. A gravação e a exportação simuladas foram aprovadas
+manualmente; ainda é necessário testar a exclusão local e corrigir a semântica
+do horário final antes de encerrar este incremento.
 
 O sistema não realiza diagnóstico clínico e não deve orientar decisões médicas.

@@ -90,7 +90,8 @@ execução Android.
 - evoluir a interface do OLED para apresentar informações úteis ao usuário;
 - revisar e aprovar formalmente o problema, a hipótese, os objetivos e o
   protocolo ético antes de estudos com participantes;
-- validar manualmente no tablet a exportação CSV/JSON e a exclusão local;
+- concluir o teste manual de exclusão local e corrigir o registro do horário
+  final da sessão; a exportação CSV/JSON já foi validada no tablet;
 - acrescentar histórico de sessões antes de persistir qualquer dado real.
 
 ## Licença
