@@ -345,3 +345,19 @@ UTC, duração de 30,003 segundos, 30 amostras e métricas fisiológicas
 indisponíveis. A captura foi incorporada ao repositório com SHA-256. O portão de
 persistência, exportação, exclusão e recuperação após reinicialização está
 concluído para dados simulados. Essa conclusão não se estende a dados reais.
+
+## 31/08/2026 — reprodução do ambiente em notebook de trabalho
+
+O repositório foi clonado em uma segunda máquina Windows e confirmado na branch
+`main`, sincronizado com `origin/main` e sem alterações locais. Como não havia
+Flutter instalado, foi preparada uma instalação do Flutter 3.47.2 estável no
+perfil do usuário, sem exigir privilégios administrativos.
+
+No novo ambiente, a análise estática foi aprovada, os 24 testes automatizados
+foram concluídos e o APK de depuração foi gerado. Um dispositivo Android físico
+foi reconhecido por USB, recebeu o aplicativo por `flutter run` e abriu o
+BluePulse corretamente, conforme confirmação do orientador. A reprodução
+valida a portabilidade do ambiente de desenvolvimento; ela não incluiu nova
+conexão BLE com o ESP32 nem validação clínica ou fisiológica. Os detalhes e as
+limitações estão na
+[evidência da segunda máquina](evidencias/2026-08-31-reproducao-ambiente-segunda-maquina.md).

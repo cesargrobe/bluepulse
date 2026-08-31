@@ -48,6 +48,7 @@ integrada.
 - [Evidência da sessão temporizada e pausa oceânica](software/evidencias/2026-08-30-sessao-temporizada-pausa-oceanica.md)
 - [Evidência da persistência e exportação simulada](software/evidencias/2026-08-30-persistencia-exportacao-simulada.md)
 - [Evidência do histórico de sessões simuladas](software/evidencias/2026-08-31-historico-sessoes-simuladas.md)
+- [Evidência da reprodução do ambiente em uma segunda máquina](software/evidencias/2026-08-31-reproducao-ambiente-segunda-maquina.md)
 - [Evidência da primeira conexão BLE real](software/evidencias/2026-08-30-primeira-conexao-ble-real.md)
 - [Proposta visual e análise de design](software/design/proposta-visual-2026-08-30.md)
 - [Decisão 0002 — Flutter com Android primeiro](decisoes/0002-flutter-android-primeiro.md)

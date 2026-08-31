@@ -74,6 +74,7 @@ execução Android.
 - [Evidência da sessão temporizada e pausa oceânica](docs/software/evidencias/2026-08-30-sessao-temporizada-pausa-oceanica.md)
 - [Evidência da persistência e exportação simulada](docs/software/evidencias/2026-08-30-persistencia-exportacao-simulada.md)
 - [Evidência do histórico de sessões simuladas](docs/software/evidencias/2026-08-31-historico-sessoes-simuladas.md)
+- [Evidência da reprodução do ambiente em uma segunda máquina](docs/software/evidencias/2026-08-31-reproducao-ambiente-segunda-maquina.md)
 - [Evidência da primeira conexão BLE real](docs/software/evidencias/2026-08-30-primeira-conexao-ble-real.md)
 - [Proposta visual e análise de design](docs/software/design/proposta-visual-2026-08-30.md)
 - [Arquitetura de hardware](docs/hardware/README.md)
